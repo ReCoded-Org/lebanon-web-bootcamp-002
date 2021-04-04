@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  margin: 0px;
+}
+aside {
+  display: flex;
+  width: 40vw;
+  background-color: #3d4f5d;
+}
+
+aside > .div1 {
+  padding-left: 10px;
+  align-self: center;
+}
+
+.div1 > h3 {
+  color: white;
+  font-size: h1;
+}
+
+.div1 > p {
+  color: lightblue;
+}
+
+main {
+  width: 70vw;
+  display: flex;
+  padding-right: 15%;
+  padding: 5%;
+}
+.header > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+section > p {
+  color: grey;
+}
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+#css1 {
+  background-color: green;
+  padding: 2px 5px 2px 5px;
+  color: white;
+  text-align: center;
+}
+
+#js1 {
+  background-color: blue;
+  padding: 2px 5px 2px 5px;
+  color: white;
+  text-align: center;
+}
+
+#js2 {
+  background-color: red;
+  padding: 2px 5px 2px 5px;
+  color: white;
+  text-align: center;
+}
+.pic-container {
+  display: flex;
+  justify-content: space-around;
+}
+.pic-container > img {
+  width: 45%;
+}
+.media-container {
+  width: 100%;
+}
+.social {
+  width: 100%;
+  color: #3d4f5d;
+  background-color: #000;
+}
+div > table {
+  text-align: center;
+}

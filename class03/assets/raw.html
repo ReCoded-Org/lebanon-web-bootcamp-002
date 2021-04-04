@@ -11,10 +11,10 @@
 
 <body>
     <aside>
-        <div>
+        <div class="div1">
             <h3>MY BLOG</h3>
             <p>Where my ideas manifest <br> themselves verbally!</p>
-            <p><a href="#">HOME</a><a href="#">PROJECTS</a></p>
+            <p><a id ="home" href="#">HOME</a><a id="projects" href="#">PROJECTS</a></p>
         </div>
         </div>
     </aside>
@@ -23,9 +23,11 @@
         <div>
             <section>
                 <span>PINNED POST</span>
-                <h2>First blog post</h2>
-                <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="avatar">
-                <p>By<a href="#"> Not Salah Al-Dhafteri</a> under <span>Css</span> <span>Javascript</span></p>
+                <div class="header">
+                    <h2>First blog post</h2>
+                   <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="avatar">
+                </div>
+                <p>By<a href="#"> Not Salah Al-Dhafteri</a> under <span id="css1">Css</span> <span id="js1">Javascript</span></p>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
                     a galley of type and scrambled it to make a type specimen
@@ -38,9 +40,11 @@
 
             <section>
                 <span>RECENT POSTS</span>
-                <h2>How I go about my living day </h2>
-                <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="avatar">
-                <p>By<a href="#"> Not Salah Al-Dhafteri</a> under <span>Javascript</span></p>
+                <div class="header">
+                    <h2>How I go about my living day </h2>
+                    <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="avatar">
+                </div>
+                <p>By<a href="#"> Not Salah Al-Dhafteri</a> under <span id="js2">Javascript</span></p>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
                     a galley of type and scrambled it to make a type specimen
@@ -52,22 +56,25 @@
             </section>
 
             <section>
-
-                <h2>Photos from that time when I never visited these places</h2>
-                <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="avatar">
+                <div class="header">
+                     <h2>Photos from that time when I never visited these places</h2>
+                    <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="avatar">
+                </div>
                 <p>By<a href="#"> Not Salah Al-Dhafteri</a> under <span>Not
                         visited places</span>
-                <div>
+                <div>        
+                  <div class="pic-container">
 
-                    <img src=".https://www.iccs.org.uk/sites/www.iccs.org.uk/files/2020-04/04AAC5C8-E3BE-4044-8E9F-2ECA2A682D0E.jpeg"
-                        alt="p1">
+                    <!--  -->
+                    <img src="https://www.iccs.org.uk/sites/www.iccs.org.uk/files/2020-04/04AAC5C8-E3BE-4044-8E9F-2ECA2A682D0E.jpeg"
+                        alt="p1">    
                     <img src="https://i.pinimg.com/originals/f5/95/01/f595010fdc287b3588d9cffef1acbd0f.jpg" alt="p2">
-
+                    </div>
 
                     <div>
                         <table>
                             <thead>
-                                <tr>
+                                <tr class="social">
                                     <td width="100px">About</td>
                                     <td width="100px">Twitter</td>
                                     <td>Github</td>
