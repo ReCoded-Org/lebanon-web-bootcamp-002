@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    margin: 0;
+    width: 100%;
+}
+  
+aside {
+    background-color: rgb(61, 79, 93);
+    width: 30vw;
+    padding: 220px 0px 150px 70px;
+
+}
+  
+aside div {
+    padding: 20px;
+    text-align: right;
+}
+  
+aside h3 {
+    color: white;
+    font-size: 25px;
+}
+  
+aside p {
+    color: rgb(160, 190, 210);
+    font-size: 20px;
+}
+  
+aside a {
+    border: 3px solid rgb(160, 190, 210);
+    padding: 5px;
+    margin: 2px;
+    color: rgb(160, 190, 210);
+    text-decoration: none;
+    font-family: sans-serif;
+}
+  
+span {
+    color: grey;
+}
+  
+p span {
+    padding: 5px 16px 5px 16px;
+  
+    color: white;
+  
+    border-color: white;
+}
+p a {
+    color: rgb(102,146,200);
+    text-decoration: none;
+}
+
+section p {
+    font-family: 'Gill Sans';
+    color: rgb(62, 65, 66);
+}
+  
+.green {
+    background-color: rgb(38, 224, 38);
+}
+  
+.blue {
+    background-color: blue;
+}
+  
+.red {
+    background-color: rgb(209, 34, 34);
+}
+  
+.grey {
+    background-color: grey;
+}
+  
+.photo {
+    display: flex;
+}
+  
+.visited-images {
+    width: 30vw;
+  
+    height: 40vh;
+  
+    margin: 15px;
+}
+  
+figure {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    color: gray;
+}
+
+tr {
+    margin-bottom: 5px;
+}
+
+hr {
+    width: 99%;
+    color: rgb(190,190,199) !important;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+section {
+    margin: 40px 0px 0px 40px;
+}
+
+.avatar {
+    display: flex;
+    width: 1000px;
+    height: 40px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.small {
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+  
+.color {
+    color: rgb(175, 175, 180);
+    font-family: sans-serif;
+}
