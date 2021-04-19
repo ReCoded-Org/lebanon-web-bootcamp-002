@@ -1,0 +1,44 @@
+body {
+  font-family: sans-serif;
+  background-color: blueviolet;
+}
+
+#date {
+  color: aqua;
+  text-align: center;
+
+}
+
+main {
+  margin: 50px auto;
+  width: 280px;
+  color: white;
+}
+div {
+  margin: 50px auto;
+  width: 280px;
+  color: white;
+  font-size: 15px;
+}
+
+input {
+  border-style: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 4px 6px;
+}
+
+.infoPlusBtn {
+  margin: 15px auto;
+}
+
+.infoPlusBtn button {
+  border-style: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 4px 6px;
+}
+
+.infoPlusBtn input {
+  width: 178px;
+}
