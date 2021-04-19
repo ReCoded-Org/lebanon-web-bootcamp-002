@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+}
+
+.h1 {
+  font-family: "Helvetica", arial, sans-serif;
+  font-size: 30px;
+}
+
+input[type="date"] {
+  color: #e1f1f3;
+  font-family: "Helvetica", arial, sans-serif;
+  font-size: 18px;
+  border: #ebedee;
+  border-radius: 5px;
+  background: #1d424b;
+  padding: 5px;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+#addToDo {
+  color: #e1f1f3;
+  border-radius: 5px;
+  background: #1d424b;
+  padding: 5px;
+}
+#new-task-description {
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

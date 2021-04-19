@@ -34,3 +34,16 @@ Feel free to use whatever CSS framework or just CSS as long as it looks nice and
 #### Version 1 GIF Example
 
 ![gif-example](https://raw.githubusercontent.com/ReCoded-Org/iq-bootcamp-todolist-students/master/Example.gif)
+
+#### Version 2 requirements:
+
+- add a list of priorities that consist of (1, 2, 3) and user should be able to select a priority to add to the task.
+- there should be a check button on each task item in the list and when the user click it, it should add a line-through on the task title (basically making this task checked).
+- make sure to display the each task priority along its title and deadline
+- pass the task as an object to add it to your task list.
+
+##### PS: if you are not storing tasks in an array and you feel you are having problems checking (adding line-through over task title) the task, try to make the tasks as an array or just checkout how to render the tasks as an array of objects.
+
+#### Version 2 GIF Example
+
+![v2-example](https://i.imgur.com/8olRBfh.gif)
