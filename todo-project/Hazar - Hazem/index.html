@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+		<script src="./src/index.js"></script>
+		<link rel="stylesheet" type="text/css" href="./src/styles.css"/>
+  </head>
+
+  <body>
+		<h1 class="h1">Today</h1>
+    <h1 id="date" class="h1"></h1>
+    <div id="app">
+			<form id="create-task-form" action="#" method="post">		
+			<label for="start">Select Deadline:</label>
+			<input type="date" id="deadline" name="deadline">
+		  </br></br>
+			<input type="text" id="new-task-description" name="new-task-description" placeholder="Enter your todo">
+			<button id="addToDo">Add todo</button>
+
+		</div>
+		<div id="list">
+				<h2 id= "h2">My Todos</h2>
+				<ul id="tasks">
+				</ul>
+			</div>
+
+
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
