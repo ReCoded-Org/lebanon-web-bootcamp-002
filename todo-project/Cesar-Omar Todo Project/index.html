@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div id='date'>
+        <h1 id="currentday"></h1>
+        <h2 id="currentdate"></h2>    
+    </div>
+    <hr>
+    <form id = 'todoform'>
+        <div>
+            <label>Select deadline</label>
+            <input type="date" id="deadline"></input>
+        </div>
+        <br>
+        <div>
+            <label>Enter Your Task</label>
+            <input type="text" id = 'todoinput' placeholder="Enter Your ToDo"></input>
+            <input type="submit" id="submit" value="Add ToDo"></input>    
+        </div>
+    </form>
+    <ul id="todolist"></ul>
+    <script src="index.js"></script>
+</body>
+</html>
