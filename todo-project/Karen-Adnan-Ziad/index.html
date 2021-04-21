@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To do</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header id="title">
+      <h1 id="head">Your ToDo List</h1>
+      <h2 id="date">Today:</h2>
+      <hr id="line1">
+    </header>
+    <section id='form1'>
+      <form id="toDo">
+        <div id="dd">
+          <!-- <label for="taskDesc">Select Deadline</label> <br> -->
+          <input id="taskDate" type="date" >
+          <input id="taskDesc" type="text" placeholder="Enter Your Task" required/>
+
+        </div>
+        <hr id="line2">
+        <div id="buttons">
+          <input id="btnAddTask" type="submit" value="Add Task" />
+        </div>
+
+      </form>
+    </section>
+    <div id="lists">
+      <ul id="TaskList"></ul>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
