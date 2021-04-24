@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do app</title>
+</head>
+<body>
+    <h1>Today</h1>
+    <h1 id="todayDate"></h1>
+    <form id="submit">
+        <input type="text" placeholder="Enter your to-do" id="input" required></input>
+        <input type="date" id="date" required>
+        <br>
+        <input id="addBtn" type="submit" value = "To-do">
+        <select id="priorities"> 
+            <option value = "Priority 1">Priority 1</option>
+            <option value = "Priority 2">Priority 2</option>
+            <option value = "Priority 3">Priority 3</option>
+        </select>
+
+    </form>
+    <p id="defaultText">Congrats you have no tasks!<ul id="list"></ul></p>
+    <script src="./index.js"></script>
+</body>
+</html>

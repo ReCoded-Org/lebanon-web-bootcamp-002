@@ -47,3 +47,17 @@ Feel free to use whatever CSS framework or just CSS as long as it looks nice and
 #### Version 2 GIF Example
 
 ![v2-example](https://i.imgur.com/8olRBfh.gif)
+
+#### Version 3 requirements:
+
+- tasks should be stored in an array of objects
+- user can now delete tasks from the list
+- separation of concerns (there should be a separate function to add, delete and check the task)
+- you should have a date formatting function that returns the date in this format (MMMM DD, YYYY) for example (May 20, 2020).
+- if the task due date or deadline has passed make the tasks title have a red background or indicate that this task due date has passed and have a function to do that too
+
+##### PS: if you want to store the tasks into your storage so you can still have them when you refresh your page google localstorage and how to store array of objects inside localstorage 😉
+
+#### Version 3 GIF Example
+
+![v3-example](https://i.imgur.com/P7E8GoZ.gif)
