@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+    <link href="./src/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <form>
+      <h3>Shopping list:</h3>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            name="shoppingList[]"
+            class="shopping-item"
+            value="Lettuce"
+          />
+          Lettuce
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="shoppingList[]"
+            class="shopping-item"
+            value="Soap"
+          />
+          Soap
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="shoppingList[]"
+            class="shopping-item"
+            value="Toilet Paper"
+          />
+          Toilet Paper
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="shoppingList[]"
+            class="shopping-item"
+            value="Cucumber"
+          />
+          Cucumber
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="shoppingList[]"
+            class="shopping-item"
+            value="Popcorn"
+          />
+          Popcorn
+        </label>
+      </div>
+      <div>
+        <button id="check-all" type="button">
+          Check all
+        </button>
+        <button id="uncheck-all" type="button">Uncheck all</button>
+      </div>
+    </form>
+
+    <h2>Log</h2>
+    <div id="log" />
+
+    <script src="./index.js"></script>
+  </body>
+</html>

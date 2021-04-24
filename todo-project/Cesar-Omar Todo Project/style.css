@@ -1,0 +1,27 @@
+body{
+    width: 100%;
+    text-align: center;
+}
+h1, h2{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+h1{
+    margin-right: 70px;
+}
+hr{
+    width: 500px;
+}
+#date{
+    display: flex;
+    justify-content: center;
+}
+ul{
+    list-style: inside;
+}
+#submit{
+    background-color: rgb(94, 228, 94);
+}
+#todoinput, #deadline{
+    margin-left: 25px;
+}

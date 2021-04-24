@@ -1,0 +1,266 @@
+body {
+  display: flex;
+  margin: 0;
+}
+
+aside {
+  order: 0;
+  background-color: #3d4f5d;
+  width: 25vw;
+  padding-top: 16%;
+  padding-right: 2%;
+  font-size: x-large;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* CSS, Javascript, and "Not Visited Places" Button Styles */
+.cssb1 {
+  display: inline-block;
+  background: green;
+  color: white;
+  padding: 1px 10px 1px 10px;
+}
+
+.jsb1 {
+  display: inline-block;
+  background: blue;
+  color: white;
+  padding: 1px 10px 1px 10px;
+}
+
+.jsb2 {
+  display: inline-block;
+  background: red;
+  color: white;
+  padding: 1px 10px 1px 10px;
+}
+
+.nvpbtn {
+  display: inline-block;
+  background: grey;
+  color: white;
+  padding: 1px 10px 1px 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: auto;
+  height: auto;
+}
+
+.AsideH3 {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.AsideText {
+  display: flex;
+  justify-content: flex-end;
+  color: lightblue;
+  margin: 0px;
+  padding: 0px;
+  font-size: 30px;
+}
+
+.AsideBtns {
+  display: flex;
+  justify-content: flex-end;
+  /* margin: 20px;*/
+}
+
+.AsideButton1 {
+  color: white;
+  border: 3px solid lightskyblue;
+  margin-right: 5px;
+  padding: 5px;
+  font-size: 20px;
+}
+.AsideButton2 {
+  color: white;
+  border: 3px solid lightskyblue;
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+main {
+  order: 1;
+  width: 80vw;
+  margin: 15px;
+  padding: 35px;
+}
+
+/*div > h3 {
+  color: white;
+}*/
+
+.HeadPostSpan {
+  color: silver;
+  /*border-bottom: 1px solid rgba(192, 192, 192, 0.3);*/
+}
+
+section > img[alt="avatar"] {
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+/*section > img[alt="avatar"],
+section > h2 {
+  display: inline;
+}*/
+
+section h2,
+section img[alt="avatar"] {
+  display: inline;
+}
+
+.avatar,
+h2 {
+  display: inline;
+}
+
+.bottomImages {
+  display: flex;
+  justify-content: space-around;
+  width: 25vw;
+  flex: 80%;
+  padding: 5px;
+}
+
+.align {
+  display: flex;
+}
+
+.Social {
+  color: rgba(192, 192, 192, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+/* This removes the underline feature from hyperlinks */
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-family: Helvetica;
+}
+
+#salah {
+  color: rgb(97, 139, 207);
+}
+
+hr {
+  opacity: 20%;
+}
+
+@media only screen and (max-width: 520px) {
+  aside {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    padding-bottom: 15%;
+    /*padding-top: 40%;
+    padding-right: 50%;*/
+  }
+
+  .AsideH3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*align-self: center;*/
+    color: white;
+    margin-bottom: 0px;
+  }
+
+  .AsideText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightblue;
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+  }
+
+  .AsideBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    /* margin: 20px;*/
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    order: 1;
+    width: 80vw;
+    margin: 0px;
+    padding: 15px;
+  }
+  .section1 {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .section2 {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    font-family: Helvetica;
+  }
+
+  .Social {
+    color: rgba(192, 192, 192, 0.5);
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+
+  .align {
+    display: block;
+    padding: 5px;
+  }
+
+  /*.bottomImages {
+    display: flex;
+    flex: 90%;
+    width: 90vw;
+    padding: 5px;
+  }*/
+
+  #img1 {
+    width: 88vw;
+  }
+  #img2 {
+    width: 88vw;
+  }
+
+  .Lorem {
+    text-align: justify;
+    width: 90vw;
+  }
+}
