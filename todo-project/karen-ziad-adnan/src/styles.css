@@ -1,0 +1,55 @@
+/* input:focus {
+  outline: none;
+  color: red;
+} */
+input {
+  border: none !important;
+}
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn {
+  outline: none !important;
+  box-shadow: none !important;
+}
+#add {
+  width: 12%;
+}
+#btnAddTask {
+  width: 100%;
+}
+#btnCancelTask {
+  margin: 0 auto;
+  padding-left: 0;
+}
+#line1 {
+  opacity: 45%;
+  width: 100%;
+  height: 1.2px;
+  background-color: #7c7c7c;
+  border: none;
+  margin-top: 1%;
+}
+
+#line2 {
+  opacity: 45%;
+  width: 100%;
+  height: 1.2px;
+  background-color: #f15957;
+  border: none;
+  margin-top: 1%;
+}
+
+input[type="checkbox"]:checked + label {
+text-decoration: line-through;
+}
+
+
+
+/* date format + styling did not work
+   date range set from 2021
+   calendar style did not work
+   checkbox done
+   bolder + smaller done but couldn't change date format inside the task (html problem)
+   font-type no need*/
