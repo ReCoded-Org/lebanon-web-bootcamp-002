@@ -1,55 +1,80 @@
-/* input:focus {
-  outline: none;
-  color: red;
-} */
 input {
   border: none !important;
+  border-radius: 20px;
 }
+#sp1,
+#sp2 {
+  font-size: 0.85rem;
+}
+input.datepicker,
+input.input-field {
+  color: white;
+}
+input::placeholder {
+  font-weight: bold;
+}
+
 input:focus {
   outline: none !important;
   box-shadow: none !important;
 }
-.btn {
-  outline: none !important;
-  box-shadow: none !important;
-}
-#add {
-  width: 12%;
+#pridiv {
+  height: 7% !important;
 }
 #btnAddTask {
-  width: 100%;
+  font-weight: bold;
+  border-radius: 20px;
 }
-#btnCancelTask {
-  margin: 0 auto;
-  padding-left: 0;
+.custom {
+  position: relative;
+  top: 3px;
 }
-#line1 {
-  opacity: 45%;
-  width: 100%;
-  height: 1.2px;
-  background-color: #7c7c7c;
-  border: none;
-  margin-top: 1%;
+.datepicker-date-display {
+  background-color: #2804ae;
 }
 
-#line2 {
-  opacity: 45%;
-  width: 100%;
-  height: 1.2px;
-  background-color: #f15957;
-  border: none;
-  margin-top: 1%;
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+  color: #2804ae;
 }
 
-input[type="checkbox"]:checked + label {
-text-decoration: line-through;
+.datepicker-table td.is-today {
+  color: #2804ae;
 }
 
+.datepicker-table td.is-selected {
+  background-color: #2804ae;
+  color: white;
+}
+body {
+  background-image: url("https://i.redd.it/5ynst8kgc0k61.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: bold;
+}
+.container {
+  background-color: white;
+  margin-top: 5.5%;
+  margin-bottom: 6%;
+  padding: 1%;
+  border-radius: 20px;
+  min-height: 90vh;
+}
 
+ul {
+  border: none !important;
+}
+li {
+  border: none !important;
+}
+input[type="text"],
+textarea {
+  background-color: #2804ae;
+}
 
-/* date format + styling did not work
-   date range set from 2021
-   calendar style did not work
-   checkbox done
-   bolder + smaller done but couldn't change date format inside the task (html problem)
-   font-type no need*/
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
