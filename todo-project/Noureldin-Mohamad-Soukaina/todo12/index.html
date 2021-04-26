@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To Do List</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Organize and Never forget todo things <i class="fal fa-pencil"></i></h1>
+      <h2></h2>
+
+      <form>
+        <div id="two">
+          <input type="text" placeholder="Enter your todo" id="enter_todo" name="todo" autocomplete="off" required />
+
+          <input type="date" id="deadline" name="deadline" value="2021-4-24" required />
+
+          <!-- data-date=""
+            data-date-format="DD MMMM YYYY"
+            form="mmm/dd/yyyy" -->
+          <select name="priority" id="priority">
+            <option value="Priority 1" class="prall" selected="selected">Priority 1</option>
+            <option value="Priority 2" class="prall">Priority2</option>
+            <option value="Priority 3" class="prall">Priority 3</option>
+          </select>
+        </div>
+        <br />
+        <div id="three">
+          <div id="three_one">
+            <button id="addBtn">Add Todo</button>
+            <button id="cancel">cancel</button>
+          </div>
+        </div>
+      </form>
+      <div>
+        <h4>Your tasks :</h4>
+        <ul></ul>
+      </div>
+    </header>
+    <script src="src/index.js" type="text/javascript" defer></script>
+  </body>
+</html>

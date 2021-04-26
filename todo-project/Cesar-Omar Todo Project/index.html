@@ -22,10 +22,17 @@
         <div>
             <label>Enter Your Task</label>
             <input type="text" id = 'todoinput' placeholder="Enter Your ToDo"></input>
+            <select id = 'priority-box'>
+                <option value= 'Priority 1'>Priority 1</option>
+                <option value= 'Priority 2'>Priority 2</option>
+                <option value= 'Priority 3'>Priority 3</option>
+            </select>
             <input type="submit" id="submit" value="Add ToDo"></input>    
         </div>
     </form>
-    <ul id="todolist"></ul>
+    <ul id="todolist">
+        <p id = 'no-task'>No Tasks</p>
+    </ul>
     <script src="index.js"></script>
 </body>
 </html>

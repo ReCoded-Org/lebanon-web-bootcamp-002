@@ -4,8 +4,14 @@
     <title>To do</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scal=1.0" />
-
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -15,47 +21,66 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row justify-content-center">
-          <h1 id="head" class="fs-3 fw-bolder text-start text-md-center">Your ToDo List</h1>
+    <div class="container hoverable">
+      <div class="row">
+        <h1 id="head" class="flow-text center-align">
+          Your ToDo List
+        </h1>
       </div>
       <div class="row">
-        <h2 id="date" class="fs-5 text fw-bolder">Today:</h2>
+        <h2 id="date" class="flow-text" style="font-weight: bold;">
+          Today:
+        </h2>
       </div>
-      <hr id="line1" />
-        <form id="toDo">
-            <div class="row" >
-              <div class="col col-8">
-                <input class="form-control" id="taskDesc" type="text" placeholder="Enter Your Task"  required/>
-              </div>
-              <div class="col col-4">
-                <input class="form-control" id="taskDate" type="date" min="2021-01-01" />
-
-              </div>
-            </div>
-     <hr id="line2" />
-            <div class="row ">
-
-                  <div id="add" class="col col-2">
-                      <button class="btn btn-danger btn-md rounded-pill fw-bolder" id="btnAddTask">Add task</button>
-                  </div>
-              <div class="col col-2" >
-                  <button class="btn btn-md rounded-pill" id="btnCancelTask" >cancel</button>
-                </div>
-              <div class="col col-2 offset-6">
-                <select class="form-control" name="priorities" id="priorities">
-                  <option class="bg-secondary text-white" value="priority-1">Priority 1</option>
-                  <option class="bg-secondary text-white" value="priority-2">Priority 2</option>
-                  <option class="bg-secondary text-white" value="priority-3">Priority 3</option>
-                </select>
-              </div>
+      <div class="divider"></div>
+      <form id="toDo">
+        <div class="row indigo darken-4">
+          <div class="col s8">
+            <input
+              class="input-field col s11"
+              id="taskDesc"
+              type="text"
+              placeholder="Enter Your Task"
+              autocomplete="off"
+              required
+            />
           </div>
-        </form>
-        <div id="lists" >
-          <!-- <h4>Your Tasks </h4> -->
-          <ul class="list-group list-group-flush"  id="TaskList" style="list-style: none;"></ul>
+          <div class="col s4">
+            <input
+              type="text"
+              class="datepicker"
+              id="taskDate"
+              placeholder="Deadline"
+            />
+          </div>
         </div>
+        <div class="row">
+          <div class="divider"></div>
+        </div>
+        <div class="row">
+          <div id="add" class="col s6 m8 l8">
+            <button
+              class="waves-effect waves-light btn btn-large indigo darken-4"
+              id="btnAddTask"
+            >
+              Add task
+            </button>
+          </div>
+          <div class="col s6 m4 l4" id="pridiv">
+            <select class="deep-purple" name="priorities" id="priorities">
+              <option value="priority-1">Priority 1</option>
+              <option value="priority-2">Priority 2</option>
+              <option value="priority-3">Priority 3</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+      <div id="lists">
+        <ul id="TaskList" style="list-style: none;"></ul>
+      </div>
     </div>
     <script src="./src/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>

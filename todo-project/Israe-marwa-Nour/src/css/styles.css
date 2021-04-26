@@ -1,0 +1,100 @@
+body {
+    font-family: sans-serif;
+}
+
+#date {
+    display: flex;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item i.co {
+    position: absolute;
+    font-size: 25px;
+    padding-left: 5px;
+    left: 15px;
+    top: 10px;
+}
+
+.item i.co:hover {
+    cursor: pointer;
+}
+
+.fa-check-circle {
+    color: #6eb200;
+}
+
+.item p.text {
+    position: relative;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    left: 50px;
+    top: 5px;
+    background-color: #FFF;
+    max-width: 285px;
+}
+
+.item p.details {
+    position: relative;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: grey;
+    left: 50px;
+    top: 5px;
+    background-color: #FFF;
+    max-width: 285px;
+}
+
+.priorityHigh {
+    color: #af0000;
+}
+
+.priorityMedium {
+    color: yellow;
+}
+
+.priorityLow {
+    color: #6eb200;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.item i.de {
+    position: absolute;
+    font-size: 25px;
+    right: 15px;
+    top: 10px;
+}
+
+.item i.de:hover {
+    color: #af0000;
+    cursor: pointer;
+}
+
+#hea {
+    display: flex;
+    flex-direction: row;
+}
+
+.clear {
+    align-self: center;
+    margin-left: 100px;
+}
