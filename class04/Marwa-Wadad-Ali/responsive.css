@@ -1,0 +1,61 @@
+@media screen and (max-width: 600px) {
+
+aside {
+	width: 100%;
+    text-align: center;
+	margin: auto 0;
+}
+#aside {
+    align-items: center;
+    justify-content:center;
+    display:flex;
+}
+
+aside div {
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 100%;
+}
+
+.raw {
+	flex-direction:column;
+    width: 100%;
+    float: none;
+}
+
+body { 
+    flex-wrap: wrap;
+}
+
+.divfix img {
+    display: none;
+}
+
+#divfix1 {
+    height: 9vh;
+}
+
+#divfix2 {
+    height: 9vh;
+}
+
+#divfix3 {
+    height: 12vh;
+}
+
+#pic1, #pic2 {
+    max-width: 100%;
+    padding: 5px 0;
+    box-sizing: border-box;
+    }
+
+#footer {
+    width: 93vw;
+}
+table {
+    width: 100%;
+}
+}
+

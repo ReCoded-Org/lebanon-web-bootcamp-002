@@ -1,0 +1,87 @@
+body {
+  display: flex;
+}
+
+aside {
+  justify-content: flex-start;
+  width: 30vw;
+  background-color: grey;
+  text-align: right;
+  margin: 0;
+}
+
+aside div {
+  margin: 200px 20px;
+}
+
+aside h3 {
+  color: white;
+}
+
+aside p {
+  color: lightblue;
+}
+
+aside a {
+  text-decoration: none;
+  border: lightblue solid 1px;
+  color: white;
+  margin: 5px 5px;
+}
+section > span {
+  font-size: 10px;
+  color: grey;
+}
+main {
+  justify-content: flex-end;
+  width: 70vw;
+}
+tr {
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: lightgray;
+  font-size: 60%;
+  float: right;
+  padding: 10px 30px;
+  text-align: right;
+  margin-left: -1200px;
+  margin-top: 200px;
+}
+
+.raw {
+  display: flex;
+}
+.column {
+  flex: 50%;
+  padding: 5px;
+  height: 200px;
+}
+img[alt="avatar"] {
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  left: 900px;
+  top: 2px;
+  vertical-align: flex-start;
+  float: left;
+  margin-top: -50px;
+}
+p:first-of-type {
+  align-items: flex-start;
+  font-size: 10px;
+  margin-top: -15px;
+}
+#css {
+  background-color: green;
+  color: white;
+}
+#javascript {
+  background-color: blue;
+  color: white;
+}
+#javascript1 {
+  background-color: fuchsia;
+}
+#not {
+  background-color: grey;
+}
