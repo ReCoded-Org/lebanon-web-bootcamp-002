@@ -14,7 +14,7 @@ hr{
 }
 #date{
     display: flex;
-    justify-content: center;
+    justify-content: center; 
 }
 ul{
     list-style: inside;
@@ -24,4 +24,17 @@ ul{
 }
 #todoinput, #deadline{
     margin-left: 25px;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    display: flex;
+    justify-content: center;
+}
+/* .task-checkbox:checked + label{
+    text-decoration: line-through;
+} */
+input[type=checkbox]:checked + label {
+    text-decoration: line-through;
 }
