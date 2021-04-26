@@ -1,0 +1,174 @@
+body {
+  margin-left: 20px;
+  background: linear-gradient(to bottom, #00ffbf 0%, #cc99ff 100%);
+  background-repeat: no-repeat;
+
+  height: 1000px;
+  background-size: cover;
+}
+/* #select {
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+}*/
+header {
+  margin: 0 auto;
+}
+#enter_todo {
+  font-size: 18px;
+  color: grey;
+  background-color: white;
+  height: auto;
+  outline: 0;
+  border-width: 0 0;
+  text-align: center;
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#deadline {
+  outline: 0;
+  color: grey;
+  font-size: 18px;
+  border-width: 0 0;
+  text-align: center;
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#priority {
+  height: auto;
+  color: grey;
+  background-color: white;
+  border: 1px solid lightgrey;
+  font-size: 19px;
+  font-weight: bolder;
+  margin: 0px 10px 0px 10px;
+  text-align: center;
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: none;
+}
+#priority:hover {
+  border: 2px solid rgb(153, 153, 255);
+}
+#two {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+  text-align: center;
+}
+#three {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#addBtn {
+  background-color: rgb(153, 153, 255);
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 25%;
+}
+
+#addBtn:hover {
+  background-color: rgb(128, 128, 255);
+}
+
+#cancel {
+  color: black;
+  background-color: white;
+
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 25%;
+}
+
+h2 {
+  font-size: 35px;
+  padding-bottom: 20px;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-size: 38px;
+  color: black;
+  font-family: "Dancing Script", cursive;
+  font-weight: bolder;
+}
+.prall {
+  background-color: #606060;
+  color: white;
+}
+h4,
+h3 {
+  font-size: 20px;
+  color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+h4 {
+  font-size: 25px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+}
+li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+li div {
+  margin: 0;
+  margin-left: 10px;
+  text-align: center;
+}
+li p {
+  margin: 0 0 5px 0;
+  text-align: center;
+}
+li .list-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* make checkbox rounded:sukaina */
+/* .checkBox {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  -webkit-appearance: checkbox;
+  outline: none;
+  cursor: pointer;
+} */
+/* text-decoration: line-through;*/
