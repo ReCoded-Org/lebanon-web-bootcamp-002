@@ -70,3 +70,61 @@ function fetchImages(query, offset = 0) {
     console.error(err);
 })
 }
+
+
+//https://www.youtube.com/watch?v=HRh6zHRwRLo
+
+/*const LIMIT = 5;
+let imagesDiv;
+let searchBtn;
+let searchText;
+let frm = document.getElementsByTagName("form")[0];
+
+// document.addEventListener("DOMContentLoaded", function () {
+searchBtn = document.querySelector("#searchBtn");
+searchText = document.querySelector("#searchText");
+imagesDiv = document.querySelector("#images");
+searchBtn.addEventListener("click", () => {
+  let query = searchText.value;
+  imagesDiv.innerHTML = "";
+  fetchImages(query);
+});
+// });
+
+frm.addEventListener("submit", fetchImages);
+
+function fetchImages(query, offset = 0) {
+  // API: https://developers.giphy.com/docs/api/endpoint/#search
+  const KEY = "EISIkxkEVY1mVfueskyLqgYWxkx6TcHq";
+  const url = `
+    https://api.giphy.com/v1/gifs/search?api_key=${KEY}&q=${query}&limit=${LIMIT}&offset=${offset}`;
+  fetch(url)
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (json) {
+      console.log(json);
+      // renderImages(json);
+    });
+}
+//add image
+/*function addImages (imageSRC){
+  let imagecontainer = document.getElementById('images')
+  let img = document.createElement('img')
+      img.src = imageSRC
+      imagecontainer.appendChild(img)
+} 
+
+function addimages(){
+  fetchImages()
+  .then(object => data[0].images.original.url.forEach (object => {addImages(object)}))
+}
+
+/function renderImages(json) {
+ imagesDiv.innerHTML = `
+  <br>
+ 
+ The first five GIFs are:<br>
+ for(let i=0, i<5,i++){
+ GIFT[i]:${json.data} ;<br>
+ }*/
