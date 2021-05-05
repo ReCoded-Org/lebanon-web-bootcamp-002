@@ -1,0 +1,107 @@
+body {
+  font-family: sans-serif;
+  background-color: blueviolet;
+}
+
+#date {
+  color: aqua;
+  text-align: center;
+  font-size: 20px;
+}
+
+main {
+  margin: 50px auto;
+  width: 305px;
+  color: white;
+  text-align: center;
+}
+
+.dateDiv {
+display: flex;
+justify-content: space-around;
+margin: 8px 0;
+}
+
+.todoDiv {
+  display: flex;
+  justify-content: space-around;
+  margin: 8px 0;
+}
+
+.addtodoDiv {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+#addToDo {
+  width: 100px;
+  border-style: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 15px;
+}
+
+
+main input {
+  width: 170px;
+  border-style: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 4px 6px;
+}
+
+.infoPlusBtn {
+  margin: 15px auto;
+}
+
+.infoPlusBtn button {
+  border-style: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 4px 6px;
+}
+
+.infoPlusBtn input {
+  width: 178px;
+}
+
+
+
+
+.divDecoration {
+    margin: 50px auto;
+    width: 305px;
+    color: white;
+    font-size: 15px;
+}
+
+.divDecoration p {
+  text-align: center;
+}
+
+.divDecoration ul {
+  padding: 0;
+}
+
+.divDecoration li {
+  list-style: none;
+}
+
+
+
+.spanBin {
+  width: 25px;
+  float: right;
+}
+
+.spanDate {
+  color: aqua;
+  margin-left: 26px;
+}
+
+.spanPrio {
+  color: orange;
+  margin-left: 5px;
+}

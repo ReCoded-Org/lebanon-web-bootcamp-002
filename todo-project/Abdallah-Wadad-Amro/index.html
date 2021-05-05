@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO Project</title>
+    <link rel="stylesheet" href="styles1.css" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div>
+      <h1></h1>
+      <div class="head">
+        <form>
+          <label class="lab">Enter your TODO:</label>
+          <input
+            id="todo"
+            type="text"
+            placeholder="e.g. Submit the assignment"
+          /><br /><br />
+          <label class="lab">Select a deadline:</label>
+          <input id="todo_date" type="date" />
+          <select name="priorities" id="priorities">
+            <option value="(priority1)">priority1</option>
+            <option value="(priority2)">priority2</option>
+            <option value="(priority3)">priority3</option>
+          </select>
+          <br /><br />
+          <input type="button" id="button" value="Add Todo" />
+        </form>
+        <br />
+        <hr />
+        <p id="notask">Awesome! You have no tasks to do.</p>
+        <ul id="list"></ul>
+      </div>
+    </div>
+
+    <script src="index1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="./src/css/font-awesome.css">
+</head>
+
+<body>
+    <div id="main-content">
+        <div id="hea">
+            <h1>Today</h1>
+            <div class="clear">
+                <i class="fa fa-refresh"></i>
+            </div>
+        </div>
+        <h1 id="todayDate"></h1>
+
+        <form id="Taskform" action="#">
+            <label>Select deadline:</label>
+            <input type="date" id="input_date" required></br>
+            <input type="text" placeholder="Enter your todo" id="tasktxt" required>
+
+            <select id="priorityList" required>
+                <option value="p1">Priority 1</option>
+                <option value="p2">Priority 2</option>
+                <option value="p3">Priority 3</option>
+            </select>
+
+            <input type="submit" value="Add ToDo">
+        </form>
+
+        <div class="content">
+            <ul id="list"></ul>
+            <h2>Congratulations! you don't have any task ENJOY</h2>
+        </div>
+
+        <script src="src/index.js"></script>
+    </div>
+</body>
+
+</html>
