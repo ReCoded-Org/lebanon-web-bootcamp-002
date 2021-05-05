@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class='font-sans bg-gradient-to-b from-indigo-500 to-indigo-300 h-full'>
+	<main class='flex h-full'>
+		<div class='flex flex-col'>
+			<div class="h-24 m-2">
+				<input type="search" placeholder="Search Menu..." class="search-bar px-3 py-2 border rounded w-full" />
+		    </div>
+			<div class='menu overflow-y-auto flex-grow flex flex-wrap justify-center'>
+			</div>
+		</div>
+		<aside class="invoice w-60 flex-shrink-0 pl-3 rounded-xl bg-gray-100 h-full flex flex-col py-3">
+			<h2 class="text-lg font-bold text-center">Order Summary</h2>
+			<h5 class='text-xs text-gray-400 text-center mb-3'>Dec 5, 2020 02:30pm</h5>
+			<div class='flex justify-between pr-3'>
+				<span class="text-gray-500 text-xs">ITEMS</span>
+                <span class="text-gray-500 text-xs">PRICE</span>
+            </div>
+            <div class="invoice-items items-center gap-x-2 gap-y-2 text-xs font-semibold w-full overflow-y-auto content-start flex-grow pr-3 my-2">
+            </div>
+            
+            <div class="border-t border-gray-300 text-sm pr-3">
+                <div class='totals'>
+                    
+                </div>
+            </div>
+		</aside>
+	</main>
+	<script src="script.js">
+
+	</script>
+
+	<script src="menu.js">
+
+	</script>
+</body>
+
+</html>
