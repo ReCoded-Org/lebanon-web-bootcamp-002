@@ -1,0 +1,80 @@
+input {
+  border: none !important;
+  border-radius: 20px;
+}
+#sp1,
+#sp2 {
+  font-size: 0.85rem;
+}
+input.datepicker,
+input.input-field {
+  color: white;
+}
+input::placeholder {
+  font-weight: bold;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+#pridiv {
+  height: 7% !important;
+}
+#btnAddTask {
+  font-weight: bold;
+  border-radius: 20px;
+}
+.custom {
+  position: relative;
+  top: 3px;
+}
+.datepicker-date-display {
+  background-color: #2804ae;
+}
+
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+  color: #2804ae;
+}
+
+.datepicker-table td.is-today {
+  color: #2804ae;
+}
+
+.datepicker-table td.is-selected {
+  background-color: #2804ae;
+  color: white;
+}
+body {
+  background-image: url("https://i.redd.it/5ynst8kgc0k61.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: bold;
+}
+.container {
+  background-color: white;
+  margin-top: 5.5%;
+  margin-bottom: 6%;
+  padding: 1%;
+  border-radius: 20px;
+  min-height: 90vh;
+}
+
+ul {
+  border: none !important;
+}
+li {
+  border: none !important;
+}
+input[type="text"],
+textarea {
+  background-color: #2804ae;
+}
+
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}

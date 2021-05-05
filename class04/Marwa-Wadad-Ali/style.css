@@ -1,0 +1,122 @@
+body {
+  display: flex;
+}
+
+aside {
+  justify-content: flex-start;
+  width: 25vw;
+  background-color: grey;
+  text-align: right;
+  margin: 0;
+}
+
+aside div {
+  margin: 200px 20px;
+}
+
+aside h3 {
+  color: white;
+}
+
+aside p {
+  color: lightblue;
+}
+
+aside a {
+  text-decoration: none;
+  border: lightblue solid 1px;
+  color: white;
+  margin: 5px 5px;
+  font-size: 12px;
+}
+
+main {
+  justify-content: flex-end;
+  width: 75vw;
+  padding: 10px;
+}
+
+section > span {
+  font-size: 10px;
+  color: grey;
+}
+
+.divfix {
+  position: relative;
+  height: 10vh;
+
+}
+
+.divfix h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px 0;
+}
+
+.divfix img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.divfix p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  flex-wrap: wrap;
+}
+
+.raw {
+  display: flex;
+  justify-content: space-between;
+}
+
+#pic1 {
+  padding: 5px 5px 5px 0;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+#pic2 {
+  padding: 5px 0 5px 5px;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+#text {
+  font-size: 15px;
+  padding: 5px 0;
+}
+#css {
+  padding: 2px;
+  font-size: 15px;
+  background-color: green;
+  color: white;
+}
+#javascript {
+  font-size: 15px;
+  background-color: blue;
+  color: white;
+  padding: 2px;
+}
+#javascript1 {
+  font-size: 15px;
+  padding: 2px;
+  background-color: fuchsia;
+}
+#not {
+  font-size: 15px;
+  padding: 2px;
+  background-color: grey;
+}
+#footer {
+  width: 80vw;
+  color: lightgrey;
+  display: flex;
+  justify-content: space-evenly;
+
+}
