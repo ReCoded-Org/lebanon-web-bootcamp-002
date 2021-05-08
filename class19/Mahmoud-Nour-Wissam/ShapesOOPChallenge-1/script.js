@@ -75,22 +75,33 @@ class Shape {
     else this.dim2 = '';
     
   }
-  getType(){
+  get Type(){
     return this.type;
   }
-  getDimension1(){
+  get Dimension1(){
     return this.dim1;
   }
-  getDimension2(){
-
+  get Dimension2(){
     return this.dim2;
   }
+
+  set Type(newType){
+    this.type = newType;
+  }
+  set Dimension1(newDim1){
+    this.dim1 = newDim1;
+  }
+  set Dimension2(newDim2){
+    this.dim2 = newDim2;
+  }
+
   calculateArea(){
     if(this.type === "Circle") return Math.round((this.dim1**2) * Math.PI);
-    if(this.type === "Square") return this.dim1 * 2;
+    if(this.type === "Square") return this.dim1 ** 2;
     if(this.type === "Rectangle") return this.dim1 * this.dim2;
     if(this.type === "Triangle") return this.dim1 * this.dim2 / 2;
   }
+  
   calculateCircumference() {
     if(this.type === "Circle") return Math.round(Math.PI * this.dim1 * 2);
     if(this.type === "Square") return 4 * this.dim1;
