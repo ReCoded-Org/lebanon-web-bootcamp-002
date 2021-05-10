@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="app">
+		<form id="shape-form" style="text-align: center">
+			<label for="shape-select">Select Shape</label>
+			<select id="shape-select" name="shape">
+				<option value="0">Circle</option>
+				<option value="1">Square</option>
+				<option value="2">Rectangle</option>
+				<option value="3">Triangle</option>
+			</select>
+			<div style="margin: 5px 0;">
+			  <input type="number" id="dim-1-input" name="dim-1" placeholder="Dimension 1">
+			  <input type="number" id="dim-2-input" name="dim-2" placeholder="Dimension 2">
+			</div>
+			<input type="submit" value="Add Shape">
+		</form>
+
+		<h2>Shapes Table</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Shape</th>
+					<th>Dimension 1</th>
+					<th>Dimension 2</th>
+					<th>Area</th>
+					<th>Circumference</th>
+				</tr>
+			</thead>
+			<tbody id="shapes-table-body">
+
+			</tbody>
+	</div>
+    <script src="script.js"></script>
+  </body>
+</html>
