@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+}
+
+.poster {
+  height: 140px;
+  width: auto;
+}
+
+ul {
+  list-style: none;
+}
