@@ -15,6 +15,8 @@ You are required to create this using OOP and a css framework (eg. Bootstrap) an
 
 ## Mockups
 
+[Live demo](https://recoded-org.github.io/iq-bootcamp-wallet-project/)
+
 Wallet View
 ![No Wallet View](https://github.com/ReCoded-Org/iq-bootcamp-wallet-project-students/blob/master/mockups/no-wallet-view.jpg?raw=true)
 
