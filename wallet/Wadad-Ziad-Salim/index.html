@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Wallet</title>
+  </head>
+
+  <body>
+    <!-- Nav Bar -->
+    <div class="container-fluid">
+      <div class="row mb-5 navi align-items-center justify-content-between">
+        <div class="col-8 col-md-11">
+          <h4 class="ms-1 text-white text-center display-5 text-md-start">
+            Wallet App
+          </h4>
+        </div>
+
+        <div id="walletsNames" class="col align-self-center mx-0 d-none">
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            ></button>
+            <ul class="dropdown-menu" id="dropdownUl">
+              <!-- add wallets here -->
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <button
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal"
+                  class="btn btn-outline-info btn-sm"
+                  id="addWallet"
+                >
+                  ADD WALLET
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header new-wallet">
+            <h4 class="modal-title">Create New Wallet</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <label class="control-label">Wallet Name</label>
+                <div>
+                  <input
+                    id="walletName"
+                    type="text"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <hr class="divider" />
+              </div>
+
+              <div class="form-group currency">
+                <select
+                  id="currency"
+                  class="form-select form-select-sm"
+                  required
+                >
+                  <option selected>Select Currency</option>
+                  <option value="$">USD $</option>
+                  <option value="L.L">Lebanese Lira L.L</option>
+                </select>
+              </div>
+              <hr class="divider" />
+              <div class="form-group">
+                <label class="control-label">Balance</label>
+                <div>
+                  <input type="number" class="form-control" id="balance" />
+                  <hr class="divider" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="contol-label">Description</label>
+                <div>
+                  <input id="desc" type="text" class="form-control" id="desc" />
+                </div>
+              </div>
+            </form>
+            <!--Create Button inside Modal-->
+            <div class="modal-footer justify-content-center">
+              <button
+                style="width: 100%;"
+                data-bs-dismiss="modal"
+                type="submit"
+                id="createBtnM"
+                class="btn btn-success rounded-pill"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+          <!-- modal Body -->
+        </div>
+        <!-- modal content -->
+      </div>
+      <!-- modal dialog -->
+    </div>
+    <!-- modal -->
+
+    <!-- welcome page shown till a wallet is added -->
+    <div id="hidden1" class="container-fluid">
+      <div class="row">
+        <!-- icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="146"
+          height="146"
+          fill="currentColor"
+          class="bi bi-wallet2"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"
+          />
+        </svg>
+        <!-- welcome text -->
+        <h3 class="display-5 text-center fw-normal">Welcome!</h3>
+        <p class="fs-4 text-center lead" id="NoWalletsText">
+          You have no Wallets... start by creating one
+        </p>
+        <div class="col d-flex justify-content-center">
+          <button
+            id="create"
+            class="btn btn-danger rounded-pill"
+            data-bs-toggle="modal"
+            data-bs-target="#modal"
+          >
+            Create Wallet
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wallet hidden till it's not  -->
+    <div id="hidden2" class="container d-none">
+      <!-- create form -->
+      <form role="form">
+        <div class="form-group">
+          <!-- display total wallet -->
+          <h4 class="display-4" id="walletNameForm"></h4>
+          <label id="walletBalance" class="control-label display-6 mb-3"
+            >Wallet Balance:</label
+          >
+          <p id="descForm" class="fs-4 fw-bolder tex-wrap"></p>
+        </div>
+        <div class="row">
+          <div class="btn-group mb-3 col-md-4" id="radio">
+            <input
+              type="radio"
+              class="btn-check"
+              name="options-outlined"
+              id="incomeRadio"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-outline-success" for="incomeRadio"
+              >Income</label
+            >
+            <input
+              type="radio"
+              class="btn-check"
+              name="options-outlined"
+              id="expenseRadio"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="expenseRadio"
+              >Expense</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="mb-2 control-label">Amount</label>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <div class="input-group">
+              <!-- transactions input -->
+              <input type="number" id="transactionValue" class="form-control" />
+              <span class="input-group-text" id="currencySpan">$</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group mb-2 col-md-4">
+            <!-- transaction tags -->
+            <label for="transactionTags" class="control-label">Tags</label>
+            <input
+              type="text"
+              class="form-control"
+              id="transactionTags"
+              placeholder="Transaction Tags"
+            />
+          </div>
+          <div class="form-group mb-2 col-md-4">
+            <!-- transaction notes -->
+            <label for="transactionNotes" class="control-label">Note</label>
+            <textarea
+              class="form-control"
+              placeholder="Transaction Notes"
+              id="transactionNotes"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="col-md-4 mt-4">
+            <button class="btn btn-secondary" id="addTransaction">
+              Add Transaction
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="row ms-2" id="transactionsDiv">
+        <!-- add transaction in js here!! -->
+        <ul class="list-group" id="transactionsUL"></ul>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./src/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
