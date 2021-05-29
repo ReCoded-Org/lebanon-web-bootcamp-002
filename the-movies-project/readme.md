@@ -1,3 +1,20 @@
+# Version 2
+
+### What to do in class
+
+- Add a Spinner component to the Navbar component and make it invisible by default also pass a function called `onSearch` to the SearchBox and then when you type some text inside the SearchBox component, call it to make the spinner in the Navbar component appears. You can use spinners from here https://react-bootstrap.github.io/components/spinners/
+
+### Styling
+
+feel free to style the movies list but we suggest making it as a grid and each movie has the poster and title under it, maybe call effect when hovering or something or hide the title and show it when hovering, don't know be creative with it
+
+### Search Keywords
+
+- lifting props react
+- Events in react
+- Events with state
+- handling Forms in react
+
 # Version 1
 
 # What you and your partners will build in class
