@@ -89,9 +89,8 @@ class Shape {
       return "It's Complicated";
     }
   }
-
 }
-
+console.log(dimInput1);
 
 /*
 The class should hold these properties
