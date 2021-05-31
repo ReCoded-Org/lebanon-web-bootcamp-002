@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+}
+.expense {
+  color: red;
+}
+.income {
+  color: green;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.displayModal {
+  display: block;
+  top: 120px;
+}
