@@ -1,0 +1,16 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+#title {
+  margin-left: 15px;
+}
+#form {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 650px;
+}
+.spin {
+  margin-left: 15px;
+  display: block;
+}

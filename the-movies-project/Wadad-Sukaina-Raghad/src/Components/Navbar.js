@@ -2,6 +2,7 @@
 import { Navbar,Nav } from 'react-bootstrap';
 import React from 'react';
 import SearchBox from './SearchBox.js';
+import Spinnerr from './Spinner.js';
 import '../App.css';
 export default function NavBar() {
     return (
@@ -10,6 +11,7 @@ export default function NavBar() {
           <Nav className="mr-auto">
             <Nav.Link href="#home">Home</Nav.Link>
           </Nav>
+         
          
          <SearchBox />
 
