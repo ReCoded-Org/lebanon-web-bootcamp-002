@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Wallet APP</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Wallet App</a>
+
+      <!-- Wallet Button -->
+      <div id="wallet-btns" class="btn-group d-none">
+        <button id="selected" type="button" class="btn btn-info">
+          Wallet Name
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-info dropdown-toggle dropdown-toggle-split"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Select Wallet</span>
+        </button>
+
+        <!-- Wallets Dropdown -->
+        <div id="wallet-list" class="dropdown-menu dropdown-menu-right">
+          <div class="dropdown-divider"></div>
+          <a href="#wallet-form-modal">
+            <button class="dropdown-item">
+              + Create new wallet
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="wallet-view" class="d-none">
+        <h1 id="displayBalance" class="mt-5"></h1>
+        <!-- Transaction Form -->
+        <form id="transaction-form" class="form-group mt-5">
+          <div class="row">
+            <label for="transaction-input" class="col-4 col-form-label"
+              >Make a transaction:</label
+            >
+          </div>
+          <div class="row">
+            <div class="input-group col-4">
+              <input
+                type="number"
+                id="transaction-input"
+                class="form-control"
+                placeholder="Enter an amount"
+                aria-label="Amount (with dot and two decimal places)"
+              />
+              <div class="input-group-append">
+                <span id="currencySymbol" class="input-group-text">$</span>
+                <span id="rasid" class="input-group-text">0.00</span>
+              </div>
+            </div>
+
+            <div class="btn-group btn-group-toggle col-4" data-toggle="buttons">
+              <label class="btn btn-outline-success active">
+                <input type="radio" name="trans-type" id="income-radio" />
+                Income
+              </label>
+              <label class="btn btn-outline-danger">
+                <input type="radio" name="trans-type" id="expense-radio" />
+                Expense
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <label for="note-input" class="col-4 col-form-label"
+              >Transaction Notes:</label
+            >
+            <label for="tags-input" class="col-4 col-form-label"
+              >Transaction tags:</label
+            >
+          </div>
+          <div class="row">
+            <div class="input-group col-4">
+              <input
+                type="text"
+                id="note-input"
+                class="form-control"
+                placeholder="Transaction Notes"
+                aria-label="Notes about the transactions"
+              />
+            </div>
+            <div class="input-group col-4">
+              <input
+                type="text"
+                id="tags-input"
+                class="form-control"
+                placeholder="Transaction tags (split tags by comma)"
+                aria-label="tags"
+              />
+            </div>
+
+            <input
+              type="submit"
+              value="Add Transaction"
+              class="btn btn-secondary col-4"
+            />
+          </div>
+        </form>
+
+        <!-- Transaction List -->
+
+        <ul
+          id="transactions-list"
+          class="list-group list-group-flush mt-5"
+        ></ul>
+      </div>
+      <!-- No Wallet View -->
+      <div id="no-wallet-view" class="text-center m-3">
+        <img
+          class="mb-5"
+          style="width: 25%;"
+          src="./img_290493.png"
+          alt="no wallet"
+        />
+        <h3>No wallets found</h3>
+        <p>Start by creating one</p>
+
+        <button type="button" class="btn btn-info" id="ShowModal">
+          Create wallet
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal d-none" id="wallet-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="wallet-modal-title">
+              Creat new wallet
+            </h5>
+            <button type="button" class="close">
+              <span id="xclose">x</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Name -->
+            <div class="form-group row">
+              <label for="name" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" />
+              </div>
+            </div>
+            <!-- Currency -->
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Currency</label>
+              <div class="col-sm-10">
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="usd"
+                    class="custom-control-input"
+                    name="currency"
+                  />
+                  <label class="custom-control-label">USD ($)</label>
+                </div>
+
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    id="LL"
+                    class="custom-control-input"
+                    name="currency"
+                    checked
+                  />
+                  <label class="custom-control-label"
+                    >Lebanese Pounds (LL)</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Balance -->
+            <div class="form-group row">
+              <label for="balance" class="col-sm-2 col-form-label"
+                >Balance</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="number"
+                  class="form-control"
+                  value="0"
+                  id="balance"
+                />
+              </div>
+            </div>
+            <!-- Description -->
+
+            <div class="form-group row">
+              <label for="description" class="col-sm-2 col-form-label"
+                >Description</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="description" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              id="create-wallet-btn"
+              type="button"
+              data-dismiss="modal"
+              class="btn btn-info"
+            >
+              Create Wallet
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="./jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/wallet.js"></script>
+  </body>
+</html>
