@@ -1,3 +1,38 @@
+# Version 4
+
+### What to do in class
+
+- Load the genres when the app loads, use the useEffect hook to fetch them.
+- Create a MoviePage component. The component will be mounted when the user clicks a movie item in the grid. The grid should hide.
+- In the MoviePage, use the effect hook to load the movie based on the movie_id prop.
+- The MoviePage component should have a back button that when clicked, will return to the grid view.
+- It is preferable that you use async/await to load the movie inside the MoviePage component.
+
+### Homework
+
+In class, you have created a 2 pages application. The first page is the MovieGrid, the second one is the MoviePage. While this approach works, but for large applications with many pages, we require a routing library that makes things easier for us.
+
+Let’s explore the react-router-dom library, and refactor our app to use this library and make our pages routing professional.
+
+Tasks:
+
+- When the user clicks a movie item it should go to `/movie/${movie.title}` using the react-router and render the movie page which is basically the `MoviePage` component
+- When the user goes back using the browser’s back button, the app should send him to the previous page.
+- When the user clicks the logo or home button, it should also send them to the grid or main page
+- Organize the content inside the movie info and you should at least have an
+  - Image
+  - Title
+  - Release date
+  - Overview
+  - rate
+  - Genres (you will need to fetch all the genres and do some comparison do get the name of the genres)
+  - Trailers of this movie (which will include another fetch)
+  - Actors of this movie (which will include another fetch)
+
+### Style
+
+Be creative here it is your project, make it stand out!
+
 # Version 3
 
 ### What to do in class
