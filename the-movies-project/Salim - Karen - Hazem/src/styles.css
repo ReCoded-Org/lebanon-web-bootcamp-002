@@ -1,0 +1,19 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(5, 1, 22);
+  font-weight: bold;
+}
+
+#movieItemStyle {
+  background-color: transparent;
+  border-radius: 20px;
+  box-shadow: 4px 0px 5px #383838;
+}
+* {
+  color: white;
+}
