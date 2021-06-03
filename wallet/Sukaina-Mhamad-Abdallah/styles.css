@@ -1,0 +1,421 @@
+body {
+  margin: 0;
+}
+ul {
+  background: #343a40;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  background: #343a40;
+}
+
+li {
+  float: left;
+}
+li a {
+  display: flex;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#middlePart {
+  margin: 0 auto;
+}
+#ghost {
+  width: 20%;
+  padding-top: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h3 {
+  color: black;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+}
+h5 {
+  color: black;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+p {
+  text-align: center;
+  font-weight: bolder;
+  color: #212529;
+  font-family: "Open Sans", sans-serif;
+}
+#createWallet {
+  margin: 0 auto;
+  background: #17a2b8;
+  border-color: #17a2b8;
+  color: #fff;
+  font-size: 18px;
+  margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.25rem;
+}
+
+.new-wallet-input {
+  color: black;
+  padding-top: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 15px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.close-btn {
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #fff;
+  background-color: #696969;
+  border-color: #696969;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+}
+.save-change-btn {
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+}
+#wallet-description-input {
+  width: 100%;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#wallet-balance-input {
+  width: 100%;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.transaction {
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 20%;
+}
+.transactionTags {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+#note-input {
+  width: 100%;
+}
+#tags-input {
+  width: 100%;
+}
+
+.transactionNotes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 16%;
+}
+#inputBtns {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  background: transparent;
+}
+#income {
+  color: green;
+  border-color: green;
+}
+#expense {
+  color: red;
+  border-color: red;
+}
+#income:hover {
+  color: #fff;
+  background: green;
+}
+#expesne:hover {
+  color: #fff;
+  background: red;
+}
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.newBtn {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.add-transaction-btn {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+.btn-info-dropdown {
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+select {
+  background-color: #17a2b8;
+  width: auto;
+  height: 30px;
+  color: white;
+  border-radius: 3px;
+}
+
+.second-container {
+  padding-top: 70px;
+  padding-left: 25%;
+  padding-right: 25%;
+  overflow: hidden;
+}
+#balance-display {
+  margin: none;
+  overflow: hidden;
+}
+#transaction-form {
+  padding-top: 25px;
+  padding-left: 20px;
+  text-align: center;
+}
+.label-inputs {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+  display: flex;
+  justify-content: space-between;
+}
+.col-label {
+  padding-top: calc(0.375rem + 1px);
+  padding-bottom: calc(0.375rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+.col {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.btn-grp {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.input-grp {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.transaction-input {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.input-text {
+  display: flex;
+
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: bolder;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.income {
+  color: #28a745;
+  border-color: #28a745;
+  background-color: transparent;
+  background-image: none;
+}
+.income:hover {
+  color: #fff;
+  background: #28a745;
+  border-color: #28a745;
+}
+.expense {
+  color: #dc3545;
+  background-color: transparent;
+  background-image: none;
+  border-color: #dc3545;
+}
+.expense:hover {
+  color: #fff;
+  border-color: #dc3545;
+  background: #dc3545;
+}
+
+.col {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.add-transaction-btn {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.btn {
+  flex: 0 0 auto;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+}
