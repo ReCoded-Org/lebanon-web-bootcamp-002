@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <p>&#169; Mira Chami | Israe Moubayed | Ziad Baroudi | Omar Nachar  </p>
+      <p>&#169; Mira Chami | Ziad Baroudi | Charbel Hbayter | Omar Nachar </p>
     </div>
   );
 };
