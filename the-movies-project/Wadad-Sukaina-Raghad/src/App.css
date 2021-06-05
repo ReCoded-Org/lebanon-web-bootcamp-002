@@ -3,8 +3,7 @@
 }
 
 .Footer{
-  position: absolute;
-  bottom: 0;
+  position: bottom;
   width: 100%;
   height: 2.5rem; 
   text-align: center;
@@ -12,4 +11,37 @@
 
 .Cursor{
   caret-color: rgb(87, 156, 245);
+}
+
+.movie{
+  /* background-color: blueviolet; */
+  border-radius:3px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  margin:1rem;
+  width:250px;
+  overflow:hidden;
+  position:relative;
+}
+.movie img{
+  max-width:100%;
+}
+.movie-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.movie-over{
+  background-color: white;;
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  max-height:100%;
+  transform:translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.movie:hover .movie-over
+{
+  transform:translateY(0%);
 }
