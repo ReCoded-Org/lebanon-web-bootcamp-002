@@ -2,16 +2,23 @@
   font-family: sans-serif;
   text-align: center;
 }
-Form{
+
+.navDiv {
+  display: flex;
+}
+Form {
   display: flex;
 }
 
-.nav{
+.nav {
   display: flex;
   justify-content: space-around;
 }
 
-.mr-sm-2{
+.mr-sm-2 {
   margin-right: 10px;
 }
 
+.spinner {
+  margin-right: 10px;
+}
