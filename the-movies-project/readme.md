@@ -38,7 +38,7 @@ Tasks:
   - Release date
   - Overview
   - rate
-  - Genres (you will need to fetch all the genres and do some comparison do get the name of the genres)
+  - Genres (you will need to fetch all the genres and do some comparison to get the name of the genres)
   - Trailers of this movie (which will include another fetch)
   - Actors of this movie (which will include another fetch)
 

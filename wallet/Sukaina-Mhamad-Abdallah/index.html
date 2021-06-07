@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Wallet APP</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="#wallet">Wallet App</a></li>
+      </ul>
+    </header>
+    <div id="middlePart">
+      <img
+        src="https://cdn.onlinewebfonts.com/svg/img_290493.png"
+        alt="ghost"
+        id="ghost"
+      />
+      <h3>Oooopss!</h3>
+      <p>You have no wallets. Start by creating one!</p>
+      <button
+        type="button"
+        class="btn btn-info btn-lg"
+        data-toggle="modal"
+        data-target="#myModal"
+        id="createWallet"
+      >
+        Create Wallet
+      </button>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Create new wallet</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="new-wallet-body">
+              <div class="">
+                <label for="name-input" class="new-wallet-input">Name</label>
+                <div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="wallet-name-input"
+                  />
+                </div>
+              </div>
+              <div>
+                <label for="currency-input" class="new-wallet-input"
+                  >Currency</label
+                >
+                <div>
+                  <div>
+                    <input
+                      type="radio"
+                      id="currency-usd"
+                      class="usd"
+                      name="currency"
+                    />
+                    <label class="usd" for="currency-usd">US Dollars ($)</label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      id="currency-ll"
+                      class="ll"
+                      name="currency"
+                    />
+                    <label class="ll" for="currency-kl"
+                      >Libanese Lira (L.L.)</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label for="wallet-balance-input" class="new-wallet-input"
+                  >Balance</label
+                >
+                <div class="">
+                  <input
+                    type="number"
+                    class=""
+                    value="0"
+                    id="wallet-balance-input"
+                  />
+                </div>
+              </div>
+              <div class="">
+                <label for="wallet-desription-input" class="new-wallet-input"
+                  >Description</label
+                >
+                <div class="">
+                  <input type="text" class="" id="wallet-description-input" />
+                </div>
+                <br
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="save-change-btn"
+                data-dismiss="modal"
+              >
+                Create Wallet
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
