@@ -1,5 +1,6 @@
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import React from "react";
+import { Link } from "react-router-dom";
 import SearchBar from "./Searchbar";
 import Genre from "./Genre";
 import "../Custom.css";
@@ -22,9 +23,11 @@ const Navi = ({
         </Navbar.Brand>
         <Navbar.Collapse>
           <Nav className="mr-auto">
-            <Nav.Link className="text-white font-size-4" href="#">
-              Home
-            </Nav.Link>
+            <Link to="/">
+              <Nav.Link as="p" className="text-white font-size-4 mb-0">
+                Home
+              </Nav.Link>
+            </Link>
             <NavDropdown
               onSelect={(e) => {
                 setGenreId(e);
