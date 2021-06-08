@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Image from "react-bootstrap/Image";
 import { Link, useParams } from "react-router-dom";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import genres from "./genres";
-import Button from "react-bootstrap/Button";
+import { Container, Badge, Row, Col, Image, Button } from "react-bootstrap";
 
 //Movie Item Details Page
 
@@ -54,14 +50,16 @@ function MovieDetails() {
   console.log(movieTrailer);
 
   return (
-    <div>
-      <Button variant='outline-primary'>
+    <Container>
+      <Button id="btn-link">
         {" "}
-        <Link to='/'>{"<"} back</Link>
+        <Link to="/" id="btn-link">
+          {"<"} back
+        </Link>
       </Button>
 
-      <Row id='movieItemStyle' className='m-3 p-2'>
-        <Col lg='4'>
+      <Row id="movieItemStyle" className="m-3 p-2">
+        <Col lg="4">
           {movie.poster_path ? (
             <Image
               fluid
@@ -72,17 +70,21 @@ function MovieDetails() {
             <p>No Photo</p>
           )}
         </Col>
-        <Col lg='8'>
+        <Col lg="8">
           {" "}
           <h2>{movie.title}</h2>
           <p>{movie.overview}</p>
           <h5>IMDB Rating: {movie.vote_average}</h5>
           <h5>Release Date: {movie.release_date}</h5>
+          {movie.genres &&
+            movie.genres.map((genre, i) => (
+              <Badge className="mr-2 badge">{genre.name}</Badge>
+            ))}
           {/* Actors - Display only first 3 items from array if the 
           person's role is acting and put the name in a list */}
           <h3>Actors</h3>
-          <div className='scrollbar'>
-            <Row lg={5} id='actorsRow' className='mx-2'>
+          <div className="scrollbar">
+            <Row lg={5} id="actorsRow" className="mx-2">
               {movieActors &&
                 movieActors.map((item) => {
                   if (
@@ -96,8 +98,8 @@ function MovieDetails() {
                             "https://image.tmdb.org/t/p/original/" +
                             item.profile_path
                           }
-                          width='70%'
-                          height='70%'
+                          width="70%"
+                          height="70%"
                           thumbnail
                         />
                         <p>{item.original_name}</p>
@@ -109,18 +111,19 @@ function MovieDetails() {
           </div>
           {/* Trailer - Embed YouTube link into the webpage */}
           <h3>Trailer</h3>
-          <Row className='m-3 p-2' lg={1}>
+          <Row className="m-3 p-2">
             {movieTrailer &&
               movieTrailer.map((item) => {
-                if (item.name === "Official Trailer") {
+                if (item.name.split(" ").includes("Official")) {
                   return (
                     <Col>
+                      <h2>{item.name}</h2>
                       <iframe
-                        width='100%'
-                        height='100%'
+                        width="100%"
+                        height="100%"
                         src={YT_EMBED + item.key}
-                        frameborder='0'
-                        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen
                       ></iframe>
                     </Col>
@@ -130,7 +133,7 @@ function MovieDetails() {
           </Row>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 }
 export default MovieDetails;
