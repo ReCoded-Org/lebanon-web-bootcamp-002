@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavDropdown } from "react-bootstrap";
+import { StateContext } from "../StateProvider";
+const Genre = () => {
+  const [state] = useContext(StateContext);
 
-const Genre = ({ genre }) => {
   return (
     <>
-      {genre.genres &&
-        genre.genres.map((gen) => {
+      {state.genre[0] &&
+        state.genre[0].map((gen) => {
           return (
             <NavDropdown.Item value={gen.id} eventKey={gen.id}>
-              {" "}
-              {gen.name}{" "}
+              {gen.name}
             </NavDropdown.Item>
           );
         })}

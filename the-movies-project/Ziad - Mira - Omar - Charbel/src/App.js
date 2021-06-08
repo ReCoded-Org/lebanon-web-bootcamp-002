@@ -1,19 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,  useContext } from "react";
 import Navi from "./components/Navi";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import MoviePage from "./components/MoviePage"
-import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import {BrowserRouter as Router, Route } from "react-router-dom";
+import { StateContext } from "../src/StateProvider";
 export default function App() {
-  const [searched, setSearched] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [genring, setGenring] = useState(false)
-  const[genre, setGenre] = useState([]) 
   const [genreId, setGenreId] = useState([])
-  const[popular, setPopular] = useState([])
-  const[allPopular,setAllPopular] =useState([])
+  const [state, dispatch] = useContext(StateContext);
+  
   const TMDB_BASE_URL = "https://api.themoviedb.org"
   
   const constructUrl = (path, query) => {
@@ -27,7 +25,7 @@ export default function App() {
       .then((resp) => resp.json())
       .then((data) => {
         setGenring(false)
-        setSearched(data)
+        dispatch({ type: "SET_SEARCHED", searched: data.results })
       });
   }, [searchTerm])
 
@@ -37,8 +35,8 @@ export default function App() {
     fetch(url)
     .then((resp)=> resp.json())
     .then((data)=>{
-      setGenre(data)}
-      )
+      dispatch({ type: "SET_GENRES", genre: data.genres })
+    })
   }, [])
 
   useEffect (()=>{
@@ -46,8 +44,10 @@ export default function App() {
     let url = `${TMDB_BASE_URL}/${path}?api_key=78d25a5f3730fb9c31adbb75ca051bf6`
     fetch(url) 
     .then((resp) =>resp.json())
-    .then((data) => setAllPopular(data))
-  }, [])
+    .then((data) =>  {
+      dispatch({ type: "SET_MOVIES", movie: data.results })
+  })
+  },[])
 
   useEffect(() => {
     let CategoryId = genreId
@@ -57,18 +57,18 @@ export default function App() {
     .then((resp)=>resp.json())
     .then((data)=>{
       setGenring(true)
-      setPopular(data)      
+      dispatch({ type: "SET_POPULAR_GENRE", popularGenre: data.results })
+         
   })
 }, [genreId])
 
   return (
     <div className="App">
           <Router>
-              <Navi searchTerm={searchTerm} setSearchTerm={setSearchTerm} setGenre={setGenre} genre={genre} setGenreId = {setGenreId} popular = {popular} /> 
-              
+              <Navi searchTerm={searchTerm} setSearchTerm={setSearchTerm} setGenreId = {setGenreId} /> 
               <Route path="/moviepage/:title" component={MoviePage}/>
               <Route path="/" exact>
-                <Main genring = {genring} searched={searched} popular={popular} genreId={genreId} allPopular={allPopular} />
+                <Main genring = {genring}  genreId={genreId}  />
               </Route>
           </Router>
           <Footer />

@@ -5,14 +5,7 @@ import SearchBar from "./Searchbar";
 import Genre from "./Genre";
 import "../Custom.css";
 
-const Navi = ({
-  setSearchTerm,
-  searchTerm,
-
-  setGenre,
-  genre,
-  setGenreId,
-}) => {
+const Navi = ({ setSearchTerm, searchTerm, setGenreId }) => {
   return (
     <Navbar bg="dark" className="px-0">
       <Container fluid className="mx-0 px-0">
@@ -35,11 +28,7 @@ const Navi = ({
               className="Custom text-white"
               title="Genre"
               id="collasible-nav-dropdown">
-              <Genre
-                setGenre={setGenre}
-                setGenreId={setGenreId}
-                genre={genre}
-              />
+              <Genre setGenreId={setGenreId} />
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

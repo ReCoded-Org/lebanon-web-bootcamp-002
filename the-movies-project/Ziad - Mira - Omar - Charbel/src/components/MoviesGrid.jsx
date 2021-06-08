@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import MovieItem from "./MovieItem";
+import { StateContext } from "../StateProvider";
 
-const MoviesGrid = ({ searched, popular, genring, allPopular }) => {
-  const [selectedMovie, setSelectedMovie] = useState([]);
-  let results = searched.results;
-  let popularResults = popular.results;
-  let allPopularResults = allPopular.results;
+const MoviesGrid = ({ genring }) => {
+  const [state] = useContext(StateContext);
+  let results = state.searched[0];
+  let popularResults = state.popularGenre[0];
+  let allPopularResults = state.movie;
 
   if (genring) {
     return (
