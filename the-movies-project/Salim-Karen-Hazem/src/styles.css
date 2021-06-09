@@ -5,8 +5,15 @@
 body {
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgb(5, 1, 22);
+  background-color: rgb(16, 0, 31);
   font-weight: bold;
+}
+
+#cardItem h4,
+#cardItem,
+#cardItem h5 {
+  background-color: blanchedalmond;
+  color: rgb(3, 2, 5);
 }
 
 #movieItemStyle {
@@ -24,6 +31,51 @@ body {
   overflow: auto;
   white-space: nowrap;
 }
-h1{
-  color: white;
+h1,
+#logo {
+  color: blanchedalmond;
+}
+
+* {
+  color: blanchedalmond;
+}
+
+#btn-link{
+  background-image: linear-gradient(
+    to right,
+ rgb(252, 78, 47),
+    rgb(255, 174, 0)
+  );
+  /* background-color: rgb(255, 51, 0); */
+  color: blanchedalmond;
+  text-decoration: solid blanchedalmond;
+}
+
+#wishlist-button,
+#dropdown-basic,
+#dropdown-basic:focus {
+  /* background-color: rgb(249, 87, 2); */
+  background-color:rgb(252, 78, 47);
+  text-decoration: solid blanchedalmond;
+  outline: none;
+  border-color: rgb(252, 78, 47);
+}
+
+.btn-primary,
+.btn-check:active + .btn-primary,
+.btn-check:focus + .btn-primary,
+.btn-primary:focus,
+.btn-check:checked + .btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: transparent;
+}
+
+.badge{
+  background-color:rgb(252, 78, 47);
+  border-radius: 15px;
+  margin: 1%;
 }
