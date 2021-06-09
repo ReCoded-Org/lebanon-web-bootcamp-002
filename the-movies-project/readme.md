@@ -1,3 +1,12 @@
+# Version 6
+
+### What to do in class
+
+- build an actor info page and add it to the router (it should have its own path like `/person/${actor_id}`) so when the user clicks on any actor inside the movie page it should take him to that page and fetch the actor informations.
+- when you launch your website fetch the popular movies first and then when you do any searching replace those popular movies with the ones you searched for.
+- add your search query to the url like `mydomain.com/search?query=deadpool` and if the user types this url in the browser it should show the main page and search for whatever in the `query` in the url and show the results for that.
+
+
 # Version 5
 
 ### What to do in class
