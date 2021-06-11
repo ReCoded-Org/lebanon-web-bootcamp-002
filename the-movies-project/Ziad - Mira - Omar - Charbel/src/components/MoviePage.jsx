@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Container, Row, Col, Badge, Carousel, Image } from "react-bootstrap";
+import { useParams, Link } from "react-router-dom";
+import { Container, Row, Col, Badge } from "react-bootstrap";
 import Actor from "./Actor";
 const MoviePage = () => {
   const [movieInfo, setMovieInfo] = useState([]);
@@ -37,35 +37,12 @@ const MoviePage = () => {
       .then((data) => {
         setActors(data);
       });
-  }, [actors]);
+  }, []);
 
   return (
     <Container fluid className="ml-md-2 mt-4 mb-2">
       <Row className="d-flex justify-content-between">
         <h2 className="display-3">{movieInfo.original_title}</h2>
-        <div className="d-flex justify-content-center align-items-center ">
-          <h3
-            className="pb-5"
-            style={{ fontSize: "35px", fontWeight: "lighter" }}>
-            Lead Characters:
-          </h3>
-          {actors.cast &&
-            actors.cast.slice(0, 3).map((actor) => (
-              <div className="pt-3 mr-4">
-                <img
-                  style={{
-                    width: "100px",
-                    height: "105px",
-                    borderRadius: "50%",
-                  }}
-                  src={
-                    "https://image.tmdb.org/t/p/w500" + `${actor.profile_path}`
-                  }
-                />
-                <p className="lead">{actor.original_name}</p>
-              </div>
-            ))}
-        </div>
       </Row>
       <Row>
         <Col className="ml-0 ml-md-2 p-0">
@@ -116,7 +93,15 @@ const MoviePage = () => {
           }}
           className="d-flex pl-0">
           {actors.cast &&
-            actors.cast.map((actor, i) => <Actor key={`${i}`} actor={actor} />)}
+            actors.cast.map((actor, i) => (
+              <Link to={`/person/${actor.id}`}>
+                <ul
+                  className="d-flex justify-content-around align-items-center"
+                  style={{ width: "15vw", listStyle: "none" }}>
+                  <Actor key={`${i}`} actor={actor} />
+                </ul>
+              </Link>
+            ))}
         </ul>
       </Row>
     </Container>

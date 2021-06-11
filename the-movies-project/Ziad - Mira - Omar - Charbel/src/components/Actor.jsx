@@ -4,7 +4,9 @@ function Actor({ actor }) {
   const base_img_url = "https://image.tmdb.org/t/p/w500";
   let poster_path = base_img_url + actor.profile_path;
   return (
-    <li className="ml-3" style={{ flex: "0 0 23.33%" }}>
+    <li
+      className="d-flex justify-content-around align-items-center ml-2"
+      style={{ flex: "0 0 13.33%", flexDirection: "column" }}>
       <img
         style={{ width: "100px", height: "105px", borderRadius: "50%" }}
         src={
@@ -14,9 +16,6 @@ function Actor({ actor }) {
         }
       />
       <p className="lead"> {actor.name} </p>
-      <p className="font-italic">
-        {actor.known_for_department === "Acting" ? "Actor" : null}
-      </p>
     </li>
   );
 }
