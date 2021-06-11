@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import Navig from "./components/Navig";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
+import MoviePage from "./components/MoviePage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const TMDB_BASE_URL = "https://api.themoviedb.org/3";
 const path = "search/movie";
@@ -63,14 +65,20 @@ export default function App() {
   // https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>&language=en-US
 
   return (
-    <div className="App">
-      <Navig
-        handleMovieSearch={handleMovieSearch}
-        genres={genres}
-        handleMovieGenre={handleMovieGenre}
-      />
-      <Main demMovies={demMovies} />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navig
+          handleMovieSearch={handleMovieSearch}
+          genres={genres}
+          handleMovieGenre={handleMovieGenre}
+        />
+        <Switch>
+          <Route path="/" exact render={() => <Main demMovies={demMovies} />} />
+          <Route path="/MoviePage/:id" component={MoviePage} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
+// https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
