@@ -24,7 +24,7 @@ function GenreKey(props) {
         id="dropdown-item-button"
         title="Select Genre"
       >
-        <Dropdown.Item eventKey="all">All Genres</Dropdown.Item>
+        <Dropdown.Item eventKey="">All Genres</Dropdown.Item>
 
         <Dropdown.Divider />
         {props.genres &&
@@ -32,6 +32,8 @@ function GenreKey(props) {
             <Dropdown.Item key={Genre.id} eventKey={Genre.id}>
               {" "}
               {Genre.name}
+              {/* {console.log(Genre.id)}
+              {console.log(Genre.name)} */}
             </Dropdown.Item>
           ))}
       </DropdownButton>
