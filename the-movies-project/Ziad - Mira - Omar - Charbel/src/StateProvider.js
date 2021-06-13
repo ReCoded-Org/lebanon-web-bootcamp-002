@@ -2,7 +2,7 @@ import React, { createContext, useReducer } from "react";
 
 export const StateContext = createContext();
 
-const initialState = {movie: [], genre: [], popularGenre: [], searched: []};
+const initialState = {movie: [], genre: [], popularGenre: [], searched: [], trending: []};
 
 const reducer = (state, action) => {
     
@@ -14,7 +14,9 @@ const reducer = (state, action) => {
         case "SET_POPULAR_GENRE":
             return{...state, popularGenre: [action.popularGenre]};
         case "SET_SEARCHED":
-            return {...state, searched:[action.searched]}
+            return {...state, searched:[action.searched]};
+        case "SET_TRENDING":
+            return {...state, trending: [action.trending] }
         default:
             return state;
      

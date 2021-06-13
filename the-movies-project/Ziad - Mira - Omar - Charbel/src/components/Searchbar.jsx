@@ -1,6 +1,5 @@
 import { Button, Row, Col, Form, FormControl } from "react-bootstrap";
 import React from "react";
-
 const Searchbar = ({ searchTerm, setSearchTerm }) => {
   return (
     <Form
