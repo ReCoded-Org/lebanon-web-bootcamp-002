@@ -1,5 +1,5 @@
 .App {
-  background-color: rgb(240, 245, 243);
+  background-color: rgba(240, 240, 248, 0.8);
   font-family: sans-serif;
   height: 100vh;
   text-align: center;
@@ -70,10 +70,126 @@ a img {
 }
 
 #main {
-  background-color: rgb(240, 245, 243);
+  background-color: rgba(218, 18, 18, 0.5);
   width: 100%;
   height: 80%;
 }
 #search-box {
   border: 1px solid green;
+}
+
+#back-img {
+  position: fixed;
+  left: 0px;
+  top: 100px;
+}
+#back-img:hover {
+  cursor: pointer;
+}
+#percent {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(8, 28, 34);
+  border-radius: 450%;
+}
+.container-movie {
+  /* opacity: 1 !important; */
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: rgba(131, 115, 115, 0.8);
+  /* background-color: rgba(9, 211, 211, 0.801); */
+}
+/* .container-movie > image {
+  opacity: 1 !important;
+} */
+#movie-img {
+  border-radius: 10px;
+  width: 480px;
+  height: 700px;
+  margin: 30px 0px 30px 0px;
+}
+
+#actor-img {
+  border-radius: 10px;
+  width: 380px;
+  height: 600px;
+  margin: 30px 0px 30px 0px;
+}
+
+.container-details {
+  /* background-color: lightblue; */
+  width: 70%;
+  height: 100%;
+  margin: 3% 3% 5% 2%;
+  text-align: left;
+}
+.container-rating {
+  display: flex;
+  width: 35%;
+  height: 20%;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* background-color: #115233; */
+}
+.center {
+  align-self: center;
+}
+.inner-container {
+  display: flex;
+  width: 50%;
+
+  justify-content: space-between;
+  /* background-color: grey; */
+}
+#space {
+  width: 5%;
+}
+#youtube {
+  /* background-; */
+  width: 100%;
+  height: 80%;
+  text-align: center;
+}
+
+#search-space {
+  width: 65%;
+  height: 100%;
+}
+/* .container-movie[background-image] {
+  opacity: 0.5;
+} */
+
+/* 
+.container-movie::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+} */
+
+.menu-item {
+  padding: 0 40px;
+  margin: 5px 10px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+.menu-item-wrapper.active {
+  border: 1px blue solid;
+}
+.menu-item.active {
+  border: 1px green solid;
+}
+
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
+}
+.aka {
+  font-size: 20px;
 }
