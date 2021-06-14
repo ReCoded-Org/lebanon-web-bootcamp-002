@@ -1,15 +1,11 @@
 import React, { useState, useContext } from "react";
 import { Button, Form, Spinner, Row, Col } from "react-bootstrap";
-import { AppContext, useMovies } from "../../StateProvider";
+import { AppContext } from "../../StateProvider";
 
-//variables
-const path = "search/movie";
-
-function SearchBox(props) {
+function SearchBox() {
   const [searchInput, setSearchInput] = useState("");
   const [isHidden, setIsHidden] = useState("hidden");
-  const [state, dispatch] = useContext(AppContext);
-  const movies = useMovies(path, searchInput, 0);
+  const [, dispatch] = useContext(AppContext);
 
   function onSearch(e) {
     if (e.target.value !== "") {
@@ -18,13 +14,14 @@ function SearchBox(props) {
       setIsHidden("hidden");
     }
   }
+
   return (
     <Row>
       <Col className="mt-2 p-0" lg="1" md="1">
         {" "}
         <Spinner
           animation="grow"
-          variant="dark"
+          variant="light"
           style={{
             visibility: isHidden,
           }}
@@ -47,8 +44,8 @@ function SearchBox(props) {
             id="btn-link"
             onClick={(e) => {
               dispatch({
-                type: "SET_MOVIES",
-                value: movies,
+                type: "SET_SEARCH",
+                value: searchInput,
               });
               setSearchInput("");
               setIsHidden("hidden");
