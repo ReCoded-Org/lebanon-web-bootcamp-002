@@ -2,25 +2,99 @@
   font-family: sans-serif;
   text-align: center;
 }
+.blink {
+  font-family: neon;
+  animation: blinker 4s linear infinite;
+  color: #1c87c9;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.blink-one {
+  animation: blinker-one 1s linear infinite;
+}
+@keyframes blinker-one {
+  0% {
+    opacity: 0;
+  }
+}
+.blink-two {
+  animation: blinker-two 1.4s linear infinite;
+}
+@keyframes blinker-two {
+  100% {
+    opacity: 0;
+  }
+}
+
+/* html,
 body {
+  background-color: yellow;
+  margin: 0%;
+  padding: 0%;
+} */
+
+#whiteText {
+  color: blanchedalmond;
+   text-decoration: none;
+}
+html,
+#root {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgb(16, 0, 31);
   font-weight: bold;
+  width: 100%;
+  margin: 0;
 }
-
+#cardItem {
+  height: 30rem;
+  color: blanchedalmond;
+}
 #cardItem h4,
 #cardItem,
 #cardItem h5 {
   background-color: blanchedalmond;
   color: rgb(3, 2, 5);
+  text-align: center;
+}
+#cardItemHover {
+  background-color: blanchedalmond;
+  height: 30rem;
 }
 
-#movieItemStyle {
-  background-color: transparent;
-  border-radius: 20px;
-  box-shadow: 4px 0px 5px #383838;
-  color: white;
+a#btnCard {
+  padding: 0.3rem 3.3rem;
+  text-decoration: none;
+  min-width: 90% !important ;
+}
+
+#btnCard {
+  color: blanchedalmond;
+  width: 90%;
+  height: 50%;
+  margin: 5%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 0.3em;
+
+  background-color: rgba(14, 41, 41, 0.808);
+  border-color: transparent;
+}
+#movieTitleCard {
+  height: 3rem;
+  text-align: center;
+}
+#movieRateCard {
+  margin-top: 1em;
 }
 
 #actorsRow {
@@ -36,17 +110,17 @@ h1,
   color: blanchedalmond;
 }
 
-* {
-  color: blanchedalmond;
+.footer {
+  width: 70%;
 }
 
-#btn-link{
+#btn-link {
   background-image: linear-gradient(
     to right,
- rgb(252, 78, 47),
-    rgb(255, 174, 0)
+    rgb(77, 202, 52),
+    rgb(46, 135, 250)
   );
-  /* background-color: rgb(255, 51, 0); */
+
   color: blanchedalmond;
   text-decoration: solid blanchedalmond;
 }
@@ -54,11 +128,12 @@ h1,
 #wishlist-button,
 #dropdown-basic,
 #dropdown-basic:focus {
-  /* background-color: rgb(249, 87, 2); */
-  background-color:rgb(252, 78, 47);
+  background-color: rgb(77, 202, 52);
   text-decoration: solid blanchedalmond;
   outline: none;
-  border-color: rgb(252, 78, 47);
+  color: blanchedalmond;
+  border-color: rgb(77, 202, 52);
+  text-decoration: none;
 }
 
 .btn-primary,
@@ -74,8 +149,11 @@ h1,
   box-shadow: transparent;
 }
 
-.badge{
-  background-color:rgb(252, 78, 47);
+.badge {
+  background-color: rgb(77, 202, 52);
   border-radius: 15px;
   margin: 1%;
+}
+a {
+  text-decoration: none;
 }

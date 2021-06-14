@@ -5,6 +5,9 @@ export const AppContext = createContext();
 const initialState = {
   movies: [],
   genreId: 0,
+  searchInput: "",
+  watchList: [],
+  movieId: "",
 };
 
 function reducer(state, action) {
@@ -13,6 +16,12 @@ function reducer(state, action) {
       return { ...state, movies: action.value };
     case "SET_GENRE":
       return { ...state, genreId: action.value };
+    case "SET_SEARCH":
+      return { ...state, searchInput: action.value };
+    case "SET_WATCH":
+      return { ...state, watchList: action.value };
+    case "SET_CURRENT":
+      return { ...state, movieId: action.value };
     default:
       return state;
   }
@@ -31,7 +40,18 @@ export function StateProvider(props) {
 const TMDB_BASE_URL = "https://api.themoviedb.org/3";
 const api_key = "8f1f011d080e1565511d99335cb48312";
 
-const constructUrl = (path, query, genre) => {
+const constructUrl = (query, genre) => {
+  let path = "";
+  if (genre === 0) {
+    path = "movie/popular";
+  } else {
+    path = "discover/movie";
+  }
+
+  if (query !== "") {
+    path = "search/movie";
+  }
+
   if (query === "") {
     if (genre === 0) {
       return `${TMDB_BASE_URL}/${path}?api_key=${api_key}`;
@@ -44,18 +64,18 @@ const constructUrl = (path, query, genre) => {
 };
 
 //this function give movies + genreID
-export function useMovies(path, query, genre) {
+export function useMovies(query, genre) {
   const [movies, setMovies] = useState([]);
 
   const getMovies = () => {
-    fetch(constructUrl(path, query, genre))
+    fetch(constructUrl(query, genre))
       .then((response) => response.json())
       .then((json) => setMovies(json.results));
   };
 
   useEffect(() => {
     getMovies();
-  }, [path, query, genre]);
+  }, [query, genre]);
 
   return movies;
 }
@@ -75,7 +95,7 @@ export function useGenres() {
 
   useEffect(() => {
     getGenres();
-  }, [url]);
+  });
 
   return genres;
 }
