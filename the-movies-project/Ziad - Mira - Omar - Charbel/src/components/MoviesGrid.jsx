@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import MovieItem from "./MovieItem";
 import { StateContext } from "../StateProvider";
+import Trending from "./Trending";
 
 const MoviesGrid = ({ genring }) => {
   const [state] = useContext(StateContext);
@@ -32,14 +33,18 @@ const MoviesGrid = ({ genring }) => {
     );
   }
   return (
-    <ul
-      style={{ listStyle: "none" }}
-      className="d-flex flex-wrap justify-content-center ml-0 pl-0">
-      {allPopularResults &&
-        allPopularResults.map((movie, i) => (
-          <MovieItem key={`${i}`} movie={movie} />
-        ))}
-    </ul>
+    <>
+      <Trending />
+      <h3 className="display-4 mt-4 mb-4">Popular:</h3>
+      <ul
+        style={{ listStyle: "none" }}
+        className="d-flex flex-wrap justify-content-center ml-0 pl-0">
+        {allPopularResults &&
+          allPopularResults.map((movie, i) => (
+            <MovieItem key={`${i}`} movie={movie} />
+          ))}
+      </ul>
+    </>
   );
 };
 
