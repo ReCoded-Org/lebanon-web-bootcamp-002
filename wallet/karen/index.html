@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="icon"
+      href="https://cdn.icon-icons.com/icons2/2249/PNG/512/shield_link_variant_outline_icon_139205.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <title>Trust</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <br />
+      <div class="row">
+        <div class="col-2">
+          <div class="row" id="aside">
+            <div class="col-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-shield-lock"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"
+                />
+                <path
+                  d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z"
+                />
+              </svg>
+            </div>
+            <div class="col-5">
+              <h4>TRUST WALLET</h4>
+            </div>
+            <div class="col-4">
+              <button
+                type="button"
+                class="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-plus-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                  />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="row">
+              <div class="list-group" id="list-wallet"></div>
+            </div>
+          </div>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Create new Wallet
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group row">
+                    <label for="wallet-name" class="col-sm-2 col-form-label"
+                      >Name</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="wallet-name"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                      <label class="col-form-label">Currency</label>
+                    </div>
+                    <div class="col-sm-10">
+                      <div class="custom-control custom-radio">
+                        <input
+                          type="radio"
+                          id="currency-btc"
+                          class="custom-control-input"
+                          name="currency"
+                          value="btc"
+                        />
+                        <label class="custom-control-label" for="currency-btc"
+                          >Bitcoins (BTC)</label
+                        >
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input
+                          type="radio"
+                          id="currency-eth"
+                          class="custom-control-input"
+                          name="currency"
+                        />
+                        <label class="custom-control-label" for="currency-eth"
+                          >Ethereum (ETH)</label
+                        >
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input
+                          type="radio"
+                          id="currency-usd"
+                          class="custom-control-input"
+                          name="currency"
+                        />
+                        <label class="custom-control-label" for="currency-usd"
+                          >US Dollars ($)</label
+                        >
+                      </div>
+
+                      <div class="custom-control custom-radio">
+                        <input
+                          type="radio"
+                          id="currency-lbp"
+                          class="custom-control-input"
+                          name="currency"
+                        />
+                        <label class="custom-control-label" for="currency-lbp"
+                          >Lebanese Pound (LBP)</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="wallet-balance" class="col-sm-2 col-form-label"
+                      >Balance</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="wallet-balance"
+                        min="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="wallet-desc" class="col-sm-2 col-form-label"
+                      >Description</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="wallet-desc"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="create-btn"
+                    data-bs-dismiss="modal"
+                  >
+                    create wallet
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-10 col-sm-12 col-md-12">
+          <div id="hidden" class="text-dark text-center me-auto">
+            <h1>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="currentColor"
+                class="bi bi-shield-lock"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"
+                />
+                <path
+                  d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z"
+                />
+              </svg>
+              TRUST WALLET
+            </h1>
+            <br />
+            <br />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="80"
+              fill="currentColor"
+              class="bi bi-shield-fill-exclamation"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.55 8.502L7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0zM8.002 12a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+              />
+            </svg>
+            <h2>OOops</h2>
+            <br />
+            <h4>You have no Wallets... start by creating one</h4>
+          </div>
+          <div id="wallet-info" class="d-none">
+            <div class="row">
+              <div class="col-lg-5 col-md-12 col-sm-12 me-auto">
+                <div class="container p-2">
+                  <div class="row">
+                    <div class="col-4 me-auto">
+                      <h2>Total Balance</h2>
+                    </div>
+                    <div class="col-4 me-auto">
+                      <button
+                        id="total-expense-value"
+                        type="button"
+                        class="btn btn-light text-danger"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-down-right"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5 0 0 1 1 0v6z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-down-right"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5 0 0 1 1 0v6z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-down-right"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5 0 0 1 1 0v6z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="col-4 me-auto">
+                      <button
+                        id="total-income-value"
+                        type="button"
+                        class="btn btn-light text-success"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-up-right"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-up-right"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-up-right"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 text-dark text-center me-auto">
+                      <h1 id="total-balance"></h1>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 me-auto">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="add-transaction-outside"
+                      >
+                        Add transaction
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="col-lg-5 col-md-12 col-sm-12 me-auto">
+                <div
+                  class="container d-none p-2"
+                  data-aos="fade-left"
+                  id="transaction-box"
+                >
+                  <div class="row">
+                    <div class="col-6 me-auto">
+                      <label for="trans-amount" class="form-label"
+                        >Make Transaction</label
+                      >
+                      <div class="input-group mb-3">
+                        <span
+                          class="input-group-text"
+                          id="logo-transaction"
+                        ></span>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="trans-amount"
+                          min="0"
+                        />
+                        <span
+                          class="input-group-text"
+                          id="total-transaction"
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="col-6 me-auto">
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="options"
+                        id="expense-btn"
+                        autocomplete="off"
+                        checked
+                      />
+                      <label class="btn btn-light text-danger" for="expense-btn"
+                        >Expense</label
+                      >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="options"
+                        id="income-btn"
+                        autocomplete="off"
+                        checked
+                      />
+                      <label class="btn btn-light text-success" for="income-btn"
+                        >Income</label
+                      >
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 me-auto">
+                      <label for="trans-note" class="form-label"
+                        >Transaction Notes</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="trans-note"
+                          aria-label="Amount (to the nearest dollar)"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6 me-auto">
+                      <label for="trans-tag" class="form-label"
+                        >Transaction tags</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="trans-tag"
+                          aria-label="Amount (to the nearest dollar)"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 me-auto">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="add-transaction-inside"
+                      >
+                        Add transaction
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-lg-11 col-md-12 col-sm-12">
+                <div
+                  id="table-container"
+                  class="container d-none p-2"
+                  data-aos="fade-left"
+                >
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col me-auto">Nb*</th>
+                        <th scope="col me-auto">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-arrow-down-up"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"
+                            />
+                          </svg>
+                        </th>
+                        <th scope="col me-auto">Id</th>
+                        <th scope="col me-auto">Transfer Type</th>
+                        <th scope="col me-auto">Amout</th>
+                        <th scope="col me-auto">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody id="trans-tbody-table"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
