@@ -1,0 +1,17 @@
+body {
+  background-image: url("https://infinitywallet.io/static/e6c14196795d385e7673a959a5828b71/86feb/download_desktop_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: bold;
+}
+#hidden * {
+  color: blanchedalmond;
+}
+
+
+
+.container,
+#aside {
+  background-color: white;
+  border-radius: 0.5rem;
+}
