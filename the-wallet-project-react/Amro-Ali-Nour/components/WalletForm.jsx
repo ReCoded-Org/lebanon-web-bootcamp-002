@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { StateContext } from "../context/StateContext";
+import TransactionList from "./TransactionList";
 import uuid from "uuid";
 
 function WalletForm({ match }) {
@@ -7,7 +8,7 @@ function WalletForm({ match }) {
   const [amount, setAmount] = useState("");
   const [tag, setTag] = useState("");
   const [note, setNote] = useState("");
-  // const [tran, setTran] = useState([]);
+  const [submit, setSubmit] = useState(false);
   const [active, setActive] = useState("");
 
   // (active.Transactions.Income.length && active.Transactions.Expense.length)
@@ -28,39 +29,19 @@ function WalletForm({ match }) {
 
   useEffect(() => {
     setActive(wallets.filter((wallet) => wallet.id === match.params.id)[0]);
-  }, []);
-  // useEffect(() => {
-  //   if (active) {
-  //     const arr = [
-  //       ...active.Transactions.Income,
-  //       ...active.Transactions.Expense
-  //     ];
-  //     setTran(arr);
-  //   }
-  // }, [active]);
-  // .sort((a, b) => b.date - a.date)
+  }, [match.params.id]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("Type", Type);
-    // console.log("amount", amount);
-    // console.log("tag", tag);
-    // console.log("note", note);
-    const id = uuid.v4();
-    let today = new Date();
-    let date =
-      today.toLocaleString("default", { month: "short" }) +
-      " | " +
-      today.toLocaleString("default", { day: "2-digit" }) +
-      " | " +
-      today.toLocaleTimeString();
 
-    CreateTransaction(id, Type, amount, date, tag, note, active);
+    CreateTransaction(uuid.v4(), Type, amount, new Date(), tag, note, active);
+    setSubmit((prev) => !prev);
   };
 
   return (
     <>
       {active ? (
-        <>
+        <div className="form">
           <form>
             <div className="form-group">
               <h4 className="display-4" id="walletNameForm">
@@ -117,7 +98,6 @@ function WalletForm({ match }) {
             <div className="row mb-3">
               <div className="col-md-4">
                 <div className="input-group">
-                  {/* <!-- transactions input --> */}
                   <input
                     type="number"
                     id="transactionValue"
@@ -132,7 +112,6 @@ function WalletForm({ match }) {
             </div>
             <div className="row mb-3">
               <div className="form-group mb-2 col-md-4">
-                {/* <!-- transaction tags --> */}
                 <label htmlFor="transactionTags" className="control-label">
                   Tags
                 </label>
@@ -145,7 +124,6 @@ function WalletForm({ match }) {
                 />
               </div>
               <div className="form-group mb-2 col-md-4">
-                {/* <!-- transaction notes --> */}
                 <label htmlFor="transactionNotes" className="control-label">
                   Note
                 </label>
@@ -169,39 +147,11 @@ function WalletForm({ match }) {
             </div>
           </form>
           <div className="row ms-2">
-            {/* <!-- add transaction in js here!! --> */}
             <ul className="list-group">
-              {active &&
-                active.Transactions.Income.map((tran) => (
-                  <li key={tran.id}>
-                    <div>
-                      <span>{tran.amount}</span>
-                      <span>{tran.date}</span>
-                    </div>
-                    <div className="pop">
-                      <span>{tran.tag}</span>
-                      <span>{tran.note}</span>
-                    </div>
-                    <hr />
-                  </li>
-                ))}
-              {active &&
-                active.Transactions.Expense.map((tran) => (
-                  <li key={tran.id}>
-                    <div>
-                      <span>{tran.amount}</span>
-                      <span>{tran.date}</span>
-                    </div>
-                    <div className="pop">
-                      <span>{tran.tags}</span>
-                      <span>{tran.note}</span>
-                    </div>
-                    <hr />
-                  </li>
-                ))}
+              <TransactionList active={active} />
             </ul>
           </div>
-        </>
+        </div>
       ) : (
         " "
       )}
@@ -209,47 +159,3 @@ function WalletForm({ match }) {
   );
 }
 export default WalletForm;
-
-// if (transactions[i].type === "Expense") {
-//   transactionsUL.innerHTML += `
-
-// <div className="row">
-//   <div className="col col-md-8 ps-0 mb-0 pb-0 me-0 pe-0">
-//     <div className="dropdown">
-//       <button
-//         style={{ width: "100%", height: "100%" }}
-//         className="dropdown-toggle descdrop py-0 px-0"
-//         id="dropdownbtn"
-//         data-bs-toggle="dropdown"
-//       >
-//         <li className="me-0 text-white bg-danger list-group-item">- 1000</li>
-//       </button>
-//       <div
-//         className="dropdown-menu"
-//         style={{ backgroundColor: "#aaaaaa", width: "100%" }}
-//         aria-labelledby="dropdownbtn"
-//       >
-//         <p className="fw-bolder fs-5 text-black ms-2"> desc</p>
-//         <span className="ms-1 badge rounded-pill bg-primary">tag</span>
-//       </div>
-//     </div>
-//   </div>
-//   <div id="dated" className="col col-md-4 bg-info align-self-end">
-//     <p className="fw-bolder mb-0 mt-2 text-center">date</p>
-//   </div>
-// </div>;
-
-// let today = new Date();
-// let date =
-//   today.toLocaleString("default", { month: "short" }) +
-//   " | " +
-//   today.toLocaleString("default", { day: "2-digit" }) +
-//   " | " +
-//   today.toLocaleTimeString();
-// let today = new Date();
-// let date =
-//   today.toLocaleString("default", { month: "short" }) +
-//   " | " +
-//   today.toLocaleString("default", { day: "2-digit" }) +
-//   " | " +
-//   today.toLocaleTimeString();

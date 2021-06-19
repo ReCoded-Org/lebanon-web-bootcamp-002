@@ -5,9 +5,6 @@ import * as uuid from "uuid";
 import { StateContext } from "../context/StateContext";
 
 export default function Nav() {
-  // const handleWallet = (wallet) => {
-  //   setActive(wallet);
-  // };
   const { wallets } = useContext(StateContext);
 
   return (

@@ -97,3 +97,16 @@
   transform: scale(1);
   transition: opacity 250ms 500ms ease, transform 350ms 500ms ease;
 }
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form {
+  width: 90%;
+  margin: 0px auto;
+}
+.li {
+  list-style-type: none;
+}
