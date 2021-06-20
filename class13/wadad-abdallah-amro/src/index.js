@@ -1,4 +1,4 @@
-const LIMIT = 5;
+const LIMIT = 15;
 let imagesDiv;
 let searchBtn;
 let searchText;
@@ -7,10 +7,12 @@ let searchText;
 searchBtn = document.querySelector("#searchBtn");
 searchText = document.querySelector("#searchText");
 imagesDiv = document.querySelector("#images");
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   let query = searchText.value;
   imagesDiv.innerHTML = "";
   fetchImages(query);
+  searchText.value = "";
 });
 //});
 
@@ -29,5 +31,9 @@ function fetchImages(query, offset = 0) {
           `<img src="${item.images.downsized_large.url}">`
         );
       }
-    });
+
+    })
+    // .catch(()=>{
+    //     console.log("error");
+    //   });
 }
