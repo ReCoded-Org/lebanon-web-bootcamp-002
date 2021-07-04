@@ -1,0 +1,15 @@
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3),
+.input-group:not(.has-validation)
+  > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 0, 0, 0),
+    rgb(114, 157, 197, 1)
+  );
+  border: none;
+  border-radius: 5px;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
