@@ -1,2 +1,0 @@
-name : Amro dandashli
-github link : https://github.com/Amrodan
